@@ -1,0 +1,29 @@
+<launch>
+  <master auto="start"/>
+
+  <!-- Run the map server -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata20141018.yaml" />; -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
+
+  <!-- Tsukuba Challenge 2014  -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare141110-4.yaml" /> -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare141110-7.yaml" /> -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" />
+
+  <!-- Tsukuba Kenshu Center -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/kenshu_center.yaml" /> -->
+
+  <!--- Run URG filter-->
+  <include file="$(find urg_filter)/launch/urg_laser_filter.launch" />
+
+  <!--- Run AMCL -->
+  <include file="$(find third_robot_2dnav)/amcl/amcl_diff.launch" />
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find third_robot_2dnav)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find third_robot_2dnav)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find third_robot_2dnav)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find third_robot_2dnav)/params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find third_robot_2dnav)/params/base_local_planner_params.yaml" command="load" />
+  </node>
+</launch>
