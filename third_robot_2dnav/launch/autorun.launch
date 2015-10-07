@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find third_robot_driver)/launch/third_robot.launch"/>
+  <include file="$(find third_robot_2dnav)/launch/third_robot_configuration.launch"/>
+  
+  <include file="$(find third_robot_description)/launch/third_robot.launch">
+	<arg name="model" value="$(find third_robot_description)/urdf/third_robot.urdf"/>
+  </include>
+  
+  <include file="$(find third_robot_2dnav)/launch/move_base.launch"/>
+  
+  <include file="$(find third_robot_nav_goals)/launch/third_robot_send_goals.launch"/>
+
+</launch>

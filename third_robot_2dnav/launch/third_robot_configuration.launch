@@ -3,20 +3,20 @@
 	<param name="hokuyo_node0/frame_id" value="base_scan"/>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node0" output="screen">
 	  <remap from="hokuyo_node" to="hokuyo_node0" />
-	  <remap from="scan" to="base_scan" />
+	  <remap from="scan" to="front_bottom_lrf" />
 	</node>
  	<param name="hokuyo_node1/port" value="/dev/ttyACM2"/>
 	<param name="hokuyo_node1/frame_id" value="base_scan1"/>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node1" output="screen">
 	  <remap from="hokuyo_node" to="hokuyo_node1" />
-	  <remap from="scan" to="base_scan1" />
+	  <remap from="scan" to="front_top_lrf" />
 	</node>
 	<!-- <node pkg="lrf_tcp_ip" type="lrf_tcp_ip_node" name="lrf_tcp_ip" output="screen"> -->
 	<!--   <param name="LRFportname" value="192.168.0.20" /> -->
 	<!--   <parma name="isIntensity" value="false" /> -->
 	<!-- </node> -->
 
-	<node  pkg="offset_urg_tf" type="offset_urg_tf" name="laseroffset" output="screen" />
-	<node  pkg="third_robot_driver" type="third_robot_driver_node" name="third_robot_driver" output="screen" />
+	<!-- <node  pkg="offset_urg_tf" type="offset_urg_tf" name="laseroffset" output="screen" /> -->
+	<!-- <node  pkg="third_robot_driver" type="third_robot_driver_node" name="third_robot_driver" output="screen" /> -->
 	<!-- <node  pkg="fourth_robot_driver" type="fourth_robot_driver_node" name="fourth_robot_driver" output="screen" /> -->
 </launch>
