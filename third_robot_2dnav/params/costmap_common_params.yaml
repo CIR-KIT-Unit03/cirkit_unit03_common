@@ -5,8 +5,8 @@ footprint: [[1.2, 0.40], [1.2, -0.40], [0.0, -0.40], [0.0, 0.40]] #third
 #robot_radius: ir_of_robot
 inflation_radius: 2.5 #1.0
 
-observation_sources: laser_scan_sensor_bottom #laser_scan_sensor_top
+observation_sources: laser_scan_sensor_front_bottom laser_scan_sensor_front_top
 
 #laser_scan_sensor_bottom: {sensor_frame: base_link, data_type: LaserScan, topic: base_scan, marking: true, clearing: true}
-laser_scan_sensor_bottom: {sensor_frame: base_link, data_type: LaserScan, topic: scan_filtered, marking: true, clearing: true}
-laser_scan_sensor_top: {sensor_frame: base_link, data_type: LaserScan, topic: base_scan1, marking: true, clearing: true}
+laser_scan_sensor_front_bottom: {sensor_frame: front_bottom_lrf, data_type: LaserScan, topic: scan_filtered, marking: true, clearing: true}
+laser_scan_sensor_front_top: {sensor_frame: front_top_lrf, data_type: LaserScan, topic: base_scan1, marking: true, clearing: true}
