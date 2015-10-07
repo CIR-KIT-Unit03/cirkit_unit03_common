@@ -86,7 +86,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="front_top_lrf"/>
-    <origin rpy="0 0.57 0" xyz="0.40 0 0.75"/>
+    <origin rpy="0 0.53 0" xyz="0.40 0 0.75"/>
   </joint>
 
   <link name="front_bottom_lrf">
