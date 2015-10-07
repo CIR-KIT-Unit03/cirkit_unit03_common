@@ -2,19 +2,24 @@
   <master auto="start"/>
 
   <!-- Run the map server -->
+  
+  <!-- 戸畑キャンパス  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata20141018.yaml" />; -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
 
+  <!-- ものつくり工房  -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
+  
+  <!-- 教育研究4号棟2階  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" />
+  
   <!-- Tsukuba Challenge 2014  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare141110-4.yaml" /> -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare141110-7.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" /> -->
 
   <!-- Tsukuba Kenshu Center -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/kenshu_center.yaml" /> -->
 
   <!--- Run URG filter-->
-  <include file="$(find urg_filter)/launch/urg_laser_filter.launch" />
+  <include file="$(find third_robot_urg_filter)/launch/urg_laser_filter.launch" />
 
   <!--- Run AMCL -->
   <include file="$(find third_robot_2dnav)/amcl/amcl_diff.launch" />

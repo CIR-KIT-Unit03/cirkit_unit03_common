@@ -16,7 +16,4 @@
 	<!--   <parma name="isIntensity" value="false" /> -->
 	<!-- </node> -->
 
-	<!-- <node  pkg="offset_urg_tf" type="offset_urg_tf" name="laseroffset" output="screen" /> -->
-	<!-- <node  pkg="third_robot_driver" type="third_robot_driver_node" name="third_robot_driver" output="screen" /> -->
-	<!-- <node  pkg="fourth_robot_driver" type="fourth_robot_driver_node" name="fourth_robot_driver" output="screen" /> -->
 </launch>
