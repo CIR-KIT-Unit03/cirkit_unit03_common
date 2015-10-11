@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1/Links1
+        - /LaserScan1
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -114,8 +115,8 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color: 85; 85; 255
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -128,7 +129,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
+      Size (m): 0.3
       Style: Flat Squares
       Topic: /base_scan
       Use Fixed Frame: true
@@ -289,6 +290,42 @@ Visualization Manager:
         Z: 0
       Topic: /move_base/TrajectoryPlannerROS/global_plan
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.75
+        Min Value: -0.162183
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.1
+      Style: Flat Squares
+      Topic: /base_scan1_fix
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Arrow Length: 0.3
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Name: PoseArray
+      Topic: /particlecloud
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -313,7 +350,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 10
+      Distance: 31.0585
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -346,5 +383,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 126
+  X: 116
   Y: 14

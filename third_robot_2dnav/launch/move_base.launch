@@ -5,13 +5,14 @@
   
   <!-- 戸畑キャンパス  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata20141018.yaml" />; -->
-
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510110332.yaml" />
   <!-- ものつくり工房  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
   
   <!-- 教育研究4号棟2階  -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" /> -->
   
+
   <!-- Tsukuba Challenge 2014  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" /> -->
 
