@@ -1,11 +1,11 @@
 <launch>
-    <param name="hokuyo_node0/port" value="/dev/ttyACM1"/>
+    <param name="hokuyo_node0/port" value="/dev/sensors/hokuyo_H1101683"/>
 	<param name="hokuyo_node0/frame_id" value="front_bottom_lrf"/>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node0" output="screen">
 	  <remap from="hokuyo_node" to="hokuyo_node0" />
 	  <remap from="scan" to="base_scan" />
 	</node>
- 	<param name="hokuyo_node1/port" value="/dev/ttyACM2"/>
+ 	<param name="hokuyo_node1/port" value="/dev/sensors/hokuyo_H1101524"/>
 	<param name="hokuyo_node1/frame_id" value="front_top_lrf"/>
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node1" output="screen">
 	  <remap from="hokuyo_node" to="hokuyo_node1" />
