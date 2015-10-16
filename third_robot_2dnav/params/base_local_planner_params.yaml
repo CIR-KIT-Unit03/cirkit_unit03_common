@@ -12,3 +12,7 @@ TrajectoryPlannerROS:
 
   oscillation_reset_dist: 0.5
   escape_vel: -0.5
+  
+  sim_time: 3.0
+
+  occdist_scale: 0.05
