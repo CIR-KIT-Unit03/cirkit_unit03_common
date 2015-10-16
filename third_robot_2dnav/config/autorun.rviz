@@ -7,7 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1/Links1
-        - /LaserScan1
+        - /Path1
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -267,8 +267,8 @@ Visualization Manager:
       Class: rviz/Path
       Color: 25; 255; 0
       Enabled: true
-      Line Style: Lines
-      Line Width: 0.03
+      Line Style: Billboards
+      Line Width: 0.5
       Name: Path
       Offset:
         X: 0
@@ -294,7 +294,7 @@ Visualization Manager:
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 0.75
-        Min Value: -0.162183
+        Min Value: -0.226578
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -383,5 +383,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 116
+  X: 106
   Y: 14
