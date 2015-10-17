@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /RobotModel1/Links1
         - /Path1
+        - /Path1/Offset1
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -265,13 +266,13 @@ Visualization Manager:
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
-      Color: 25; 255; 0
+      Color: 255; 85; 255
       Enabled: true
       Line Style: Billboards
       Line Width: 0.5
       Name: Path
       Offset:
-        X: 0
+        X: -0.7
         Y: 0
         Z: 0
       Topic: /move_base/TrajectoryPlannerROS/local_plan
@@ -293,8 +294,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.75
-        Min Value: -0.226578
+        Max Value: 0.730514
+        Min Value: -0.265916
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -350,22 +351,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 31.0585
+      Distance: 4.9782
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
+        X: 2.36516
+        Y: 0.759749
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.785398
+      Pitch: 0.795398
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 0.785398
+      Yaw: 0.590398
     Saved: ~
 Window Geometry:
   Displays:
@@ -383,5 +384,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 106
+  X: 96
   Y: 14

@@ -1,8 +1,8 @@
-TrajectoryPlannerROS:
-  max_vel_x: 0.83
+bTrajectoryPlannerROS:
+  max_vel_x: 5.0
   min_vel_x: -0.50
   max_rotational_vel: 1.0
-  min_in_place_rotational_vel: 0.0
+  min_in_place_rotational_vel: 1.0
 
   acc_lim_th: 3.2
   acc_lim_x: 2.5
@@ -13,6 +13,8 @@ TrajectoryPlannerROS:
   oscillation_reset_dist: 0.5
   escape_vel: -0.5
   
-  sim_time: 3.0
+  sim_time: 10.0
 
-  occdist_scale: 2.0
+  occdist_scale: 0.01
+
+  planner_frequency: 1.0
