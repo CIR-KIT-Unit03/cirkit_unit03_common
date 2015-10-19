@@ -1,4 +1,4 @@
-bTrajectoryPlannerROS:
+TrajectoryPlannerROS:
   max_vel_x: 5.0
   min_vel_x: -0.50
   max_rotational_vel: 1.0
@@ -13,8 +13,12 @@ bTrajectoryPlannerROS:
   oscillation_reset_dist: 0.5
   escape_vel: -0.5
   
-  sim_time: 10.0
+  sim_time: 1.0
+  sim_granularity: 0.075
+  vx_samples: 10
 
   occdist_scale: 0.01
 
   planner_frequency: 1.0
+
+  publish_cost_grid_pc: true
