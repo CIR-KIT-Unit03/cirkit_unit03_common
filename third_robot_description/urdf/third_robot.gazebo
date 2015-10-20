@@ -102,6 +102,7 @@
       </sensor>
   </gazebo>
 
+  <!--
   <gazebo>
       <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
           <publishWheelTF>true</publishWheelTF>
@@ -118,5 +119,21 @@
           <robotBaseFrame>footprint</robotBaseFrame>
       </plugin>
   </gazebo>
-
+  -->
+  <gazebo>
+      <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+          <updateRate>100.0</updateRate>
+          <robotNamespace>/third_robot</robotNamespace>
+          <leftFrontJoint>base_to_left_front_wheel</leftFrontJoint>
+          <rightFrontJoint>base_to_right_front_wheel</rightFrontJoint>
+          <leftRearJoint>base_to_left_rear_wheel</leftRearJoint>
+          <rightRearJoint>base_to_right_rear_wheel</rightRearJoint>
+          <wheelSeparation>0.5</wheelSeparation>
+          <wheelDiameter>0.28</wheelDiameter>
+          <robotBaseFrame>base_link</robotBaseFrame>
+          <torque>20</torque>
+          <topicName>cmd_vel</topicName>
+          <broadcastTF>true</broadcastTF>
+      </plugin>
+  </gazebo>
 </robot>
