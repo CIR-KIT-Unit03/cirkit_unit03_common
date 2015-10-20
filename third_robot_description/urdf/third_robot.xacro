@@ -21,12 +21,13 @@
         <xacro:default_inertial mass="10"/>
     </link>
 
-    <xacro:wheel_front right_left="right" reflect_right_left="1"/>
-    <xacro:wheel_front right_left="left" reflect_right_left="-1"/>
+    <!-- wheels -->
+    <xacro:wheel right_left="right" reflect_right_left="1" front_rear="front" reflect_front_rear="1"/>
+    <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="front" reflect_front_rear="1"/>
+    <xacro:wheel right_left="right" reflect_right_left="1" front_rear="rear" reflect_front_rear="-1"/>
+    <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="rear" reflect_front_rear="-1"/>
 
-    <xacro:wheel_rear right_left="right" reflect_right_left="1"/>
-    <xacro:wheel_rear right_left="left" reflect_right_left="-1"/>
-
+    <!-- lrf -->
     <link name="front_top_lrf">
         <visual>
             <origin rpy="0 0.5 0" xyz="0 0 0"/>

@@ -19,6 +19,33 @@
         </inertial>
     </xacro:macro>
 
+    <xacro:macro name="wheel" params="right_left reflect_right_left front_rear reflect_front_rear">
+        <link name="${right_left}_${front_rear}_wheel">
+            <visual>
+                <!-- when reflect_right_left = 1 to be 0 reflect_right_left= -1 to be PI -->
+                <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/>
+                <!-- <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/> -->
+                <geometry>
+                    <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+                </geometry>
+                ->
+            </visual>
+            <collision>
+                <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+                </geometry>
+            </collision>
+            <xacro:default_inertial mass="1"/>
+        </link>
+        <joint name="base_to_${right_left}_${front_rear}_wheel" type="continuous">
+            <axis xyz="0 1 0"/>
+            <parent link="base_link"/>
+            <child link="${right_left}_${front_rear}_wheel"/>
+            <origin xyz="${base_center_x+reflect_front_rear*length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} ${radius_wheel}"/>
+        </joint>
+    </xacro:macro>
+
     <xacro:macro name="wheel_front" params="right_left reflect_right_left">
         <link name="${right_left}_front_wheel">
             <visual>
