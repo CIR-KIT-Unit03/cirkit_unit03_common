@@ -8,6 +8,8 @@
     <!-- Constants for robot dimensions -->
     <xacro:property name="length_wheel" value="0.07" />
     <xacro:property name="radius_wheel" value="0.14" />
+    <xacro:property name="length_from_base_to_wheel_front_x" value="0.41" />
+    <xacro:property name="length_from_base_to_wheel_y" value="0.25" />
     <xacro:macro name="default_inertial" params="mass">
         <inertial>
             <mass value="${mass}" />
@@ -53,7 +55,7 @@
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
         <child link="right_front_wheel"/>
-        <origin xyz="0.41 -0.25 0.14"/>
+        <origin xyz="${length_from_base_to_wheel_front_x} -${length_from_base_to_wheel_y} ${radius_wheel}"/>
     </joint>
 
     <link name="left_front_wheel">
@@ -76,7 +78,7 @@
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
         <child link="left_front_wheel"/>
-        <origin xyz="0.41 0.25 0.14"/>
+        <origin xyz="${length_from_base_to_wheel_front_x} ${length_from_base_to_wheel_y} ${radius_wheel}"/>
     </joint>
 
     <link name="right_rear_wheel">
@@ -99,7 +101,7 @@
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
         <child link="right_rear_wheel"/>
-        <origin xyz="-0.38 -0.25 0.14"/>
+        <origin xyz="-0.38 -${length_from_base_to_wheel_y} ${radius_wheel}"/>
     </joint>
 
     <link name="left_rear_wheel">
@@ -122,7 +124,7 @@
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
         <child link="left_rear_wheel"/>
-        <origin xyz="-0.38 0.25 0.14"/>
+        <origin xyz="-0.38 ${length_from_base_to_wheel_y} ${radius_wheel}"/>
     </joint>
 
     <link name="front_top_lrf">
@@ -172,7 +174,7 @@
         <child link="rear_bottom_lrf"/>
         <origin xyz="-0.45 0 0.35"/>
     </joint>
-
+<!--
     <transmission name="tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_to_left_rear_wheel">
@@ -194,5 +196,5 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
-
+-->
 </robot>
