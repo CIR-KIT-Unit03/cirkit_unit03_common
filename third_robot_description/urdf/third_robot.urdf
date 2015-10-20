@@ -118,7 +118,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="rear_bottom_lrf"/>
-    <origin xyz="-0.07 0 0.35"/>
+    <origin xyz="-0.07 0 0.39"/>
   </joint>
 
 </robot>
