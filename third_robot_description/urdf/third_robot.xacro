@@ -21,11 +21,11 @@
         <xacro:default_inertial mass="10"/>
     </link>
 
-    <xacro:wheel_front right_left="right" reflect="1"/>
-    <xacro:wheel_front right_left="left" reflect="-1"/>
+    <xacro:wheel_front right_left="right" reflect_right_left="1"/>
+    <xacro:wheel_front right_left="left" reflect_right_left="-1"/>
 
-    <xacro:wheel_rear right_left="right" reflect="1"/>
-    <xacro:wheel_rear right_left="left" reflect="-1"/>
+    <xacro:wheel_rear right_left="right" reflect_right_left="1"/>
+    <xacro:wheel_rear right_left="left" reflect_right_left="-1"/>
 
     <link name="front_top_lrf">
         <visual>
