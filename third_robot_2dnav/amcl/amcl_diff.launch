@@ -1,6 +1,6 @@
 <launch>
 <node pkg="amcl" type="amcl" name="amcl" output="screen">
-  <remap from="scan" to="base_scan" />
+  <remap from="scan" to="scan_multi" />
   <!-- Using map -->
   <param name="use_map_topic" value="true" />
   <param name="first_map_only" value="true" />
