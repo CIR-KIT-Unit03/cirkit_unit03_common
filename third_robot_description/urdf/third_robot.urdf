@@ -110,7 +110,7 @@
       <geometry>
 		<mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
         </geometry>
-      <origin rpy="0 0 3.14" xyz="0 0 0"/>
+      <origin rpy="0 0 3.1416" xyz="0 0 0"/>
     </visual>
   </link>
   
@@ -118,7 +118,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="rear_bottom_lrf"/>
-    <origin xyz="-0.07 0 0.39"/>
+    <origin rpy="0 0 3.1416" xyz="-0.07 0 0.39"/>
   </joint>
 
 </robot>

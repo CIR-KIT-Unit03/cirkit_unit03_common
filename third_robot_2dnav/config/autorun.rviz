@@ -7,8 +7,8 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1/Links1
-        - /Path1
         - /Path1/Offset1
+        - /LaserScan4
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -295,7 +295,7 @@ Visualization Manager:
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 0.75
-        Min Value: -0.251298
+        Min Value: -0.0203573
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -356,6 +356,35 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: -0.371993
+        Min Value: -9.20868
+        Value: true
+      Axis: X
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 0; 127
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.3
+      Style: Flat Squares
+      Topic: /base_scan2
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -380,7 +409,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 8.5834
+      Distance: 15.53
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -392,10 +421,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.614797
+      Pitch: 0.459797
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 1.7354
+      Yaw: 3.14859
     Saved: ~
 Window Geometry:
   Displays:
@@ -413,5 +442,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 75
+  X: 65
   Y: 14
