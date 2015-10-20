@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<robot name="origins" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+    <xacro:include filename="$(find third_robot_description)/urdf/third_robot.gazebo" />
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="length_wheel" value="0.05" />
+    <xacro:property name="radius_wheel" value="0.12" />
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+            <mass value="${mass}" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
+    </xacro:macro>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_body.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.55" />
+        </visual>
+        <collision>
+            <geometry>
+                <box size="1.5 1.5 0.005"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="10"/>
+    </link>
+
+    <link name="right_front_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1"/>
+    </link>
+
+    <joint name="base_to_right_front_wheel" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="right_front_wheel"/>
+        <origin xyz="0.41 -0.25 0.14"/>
+    </joint>
+
+    <link name="left_front_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+            </geometry>
+            <origin rpy="3.14159 0 0" xyz="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1"/>
+    </link>
+
+    <joint name="base_to_left_front_wheel" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="left_front_wheel"/>
+        <origin xyz="0.41 0.25 0.14"/>
+    </joint>
+
+    <link name="right_rear_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1"/>
+    </link>
+
+    <joint name="base_to_right_rear_wheel" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="right_rear_wheel"/>
+        <origin xyz="-0.38 -0.25 0.14"/>
+    </joint>
+
+    <link name="left_rear_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+            </geometry>
+            <origin rpy="3.14159 0 0" xyz="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="1"/>
+    </link>
+
+    <joint name="base_to_left_rear_wheel" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="left_rear_wheel"/>
+        <origin xyz="-0.38 0.25 0.14"/>
+    </joint>
+
+    <link name="front_top_lrf">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+            <origin rpy="0 0.5 0" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_front_top_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="front_top_lrf"/>
+        <origin rpy="0 0.53 0" xyz="0.40 0 0.75"/>
+    </joint>
+
+    <link name="front_bottom_lrf">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_front_bottom_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="front_bottom_lrf"/>
+        <origin xyz="0.50 0 0.39"/>
+    </joint>
+
+    <link name="rear_bottom_lrf">
+        <visual>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+            <origin rpy="0 0 3.14" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_rear_bottom_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="rear_bottom_lrf"/>
+        <origin xyz="-0.45 0 0.35"/>
+    </joint>
+
+</robot>
