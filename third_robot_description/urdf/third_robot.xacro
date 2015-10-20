@@ -21,55 +21,11 @@
         <xacro:default_inertial mass="10"/>
     </link>
 
-    <xacro:wheel right_left="right" reflect="1"/>
+    <xacro:wheel_front right_left="right" reflect="1"/>
+    <xacro:wheel_front right_left="left" reflect="-1"/>
 
-    <xacro:wheel right_left="left" reflect="-1"/>
-
-    <link name="right_rear_wheel">
-        <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
-            <geometry>
-                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
-            </geometry>
-        </collision>
-        <xacro:default_inertial mass="1"/>
-    </link>
-
-    <joint name="base_to_right_rear_wheel" type="continuous">
-        <axis xyz="0 1 0"/>
-        <parent link="base_link"/>
-        <child link="right_rear_wheel"/>
-        <origin xyz="-0.38 -${length_from_base_to_wheel_y} ${radius_wheel}"/>
-    </joint>
-
-    <link name="left_rear_wheel">
-        <visual>
-            <origin rpy="${PI} 0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
-            <geometry>
-                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
-            </geometry>
-        </collision>
-        <xacro:default_inertial mass="1"/>
-    </link>
-
-    <joint name="base_to_left_rear_wheel" type="continuous">
-        <axis xyz="0 1 0"/>
-        <parent link="base_link"/>
-        <child link="left_rear_wheel"/>
-        <origin xyz="-0.38 ${length_from_base_to_wheel_y} ${radius_wheel}"/>
-    </joint>
+    <xacro:wheel_rear right_left="right" reflect="1"/>
+    <xacro:wheel_rear right_left="left" reflect="-1"/>
 
     <link name="front_top_lrf">
         <visual>
