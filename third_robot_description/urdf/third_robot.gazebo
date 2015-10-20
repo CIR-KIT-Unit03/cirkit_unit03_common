@@ -23,6 +23,12 @@
     <material>Gazebo/Red</material>
   </gazebo>
   -->
+  <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/third_robot</robotNamespace>
+          <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      </plugin>
+  </gazebo>
 
   <gazebo reference="front_bottom_lrf">
       <sensor type="ray" name="front_bottom_lrf_hokuyo_sensor">
@@ -94,6 +100,23 @@
              <frameName>front_top_lrf</frameName>
          </plugin>
       </sensor>
+  </gazebo>
+
+  <gazebo>
+      <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+          <publishWheelTF>true</publishWheelTF>
+          <publishWheelJointState>true</publishWheelJointState><alwaysOn>true</alwaysOn>
+          <updateRate>100</updateRate>
+          <leftJoint>base_to_left_rear_wheel</leftJoint>
+          <rightJoint>base_to_right_rear_wheel</rightJoint>
+          <wheelSeparation>0.5</wheelSeparation>
+          <wheelDiameter>0.24</wheelDiameter>
+          <torque>20</torque>
+          <commandTopic>third_robot/cmd_vel</commandTopic>
+          <odometryTopic>third_robot/odom_diffdrive</odometryTopic>
+          <odometryFrame>odom</odometryFrame>
+          <robotBaseFrame>footprint</robotBaseFrame>
+      </plugin>
   </gazebo>
 
 </robot>

@@ -105,7 +105,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+                <cylinder length="${length_wheel}" radius="${radius_wheel}25"/>
             </geometry>
         </collision>
         <xacro:default_inertial mass="1"/>
@@ -165,5 +165,27 @@
         <child link="rear_bottom_lrf"/>
         <origin xyz="-0.45 0 0.35"/>
     </joint>
+
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_to_left_rear_wheel">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_to_right_rear_wheel">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
 
 </robot>
