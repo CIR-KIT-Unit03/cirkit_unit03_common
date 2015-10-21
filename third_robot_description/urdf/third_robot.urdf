@@ -121,4 +121,14 @@
     <origin rpy="0 0 3.1416" xyz="-0.07 0 0.39"/>
   </joint>
 
+  <link name="merged_lrf">
+  </link>
+
+  <joint name="base_to_merged_lrf" type="fixed">
+	<axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="merged_lrf"/>
+    <origin rpy="0 0 0" xyz="0 0 0.39"/>
+  </joint>
+
 </robot>
