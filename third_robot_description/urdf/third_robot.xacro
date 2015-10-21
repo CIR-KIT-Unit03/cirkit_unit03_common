@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<robot name="origins" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+    <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+    <xacro:include filename="$(find third_robot_description)/urdf/third_robot.gazebo" />
+    <!-- Import Rviz colors -->
+    <xacro:include filename="$(find third_robot_description)/urdf/materials.xacro" />
+    <!-- Import macros -->
+    <xacro:include filename="$(find third_robot_description)/urdf/third_robot_macro.xacro" />
+
+    <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.55" />
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_body.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.35" />
+            <geometry>
+                <box size="1.0 0.55 0.4"/>
+            </geometry>
+        </collision>
+        <xacro:default_inertial mass="10"/>
+    </link>
+
+    <!-- wheels -->
+    <xacro:wheel right_left="right" reflect_right_left="1" front_rear="front" reflect_front_rear="1"/>
+    <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="front" reflect_front_rear="1"/>
+    <xacro:wheel right_left="right" reflect_right_left="1" front_rear="rear" reflect_front_rear="-1"/>
+    <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="rear" reflect_front_rear="-1"/>
+
+    <!-- lrf -->
+    <link name="front_top_lrf">
+        <visual>
+            <origin rpy="0 0.5 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_front_top_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="front_top_lrf"/>
+        <origin rpy="0 0.53 0" xyz="0.40 0 0.75"/>
+    </joint>
+
+    <link name="front_bottom_lrf">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_front_bottom_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="front_bottom_lrf"/>
+        <origin xyz="0.50 0 0.39"/>
+    </joint>
+
+    <link name="rear_bottom_lrf">
+        <visual>
+            <origin rpy="0 0 ${PI}" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_rear_bottom_lrf" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="rear_bottom_lrf"/>
+        <origin xyz="-0.45 0 0.35"/>
+    </joint>
+    
+    
+    <!-- Camera -->
+    <link name="camera_link">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="${camera_link/3} ${camera_link} ${camera_link/2}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="${camera_link/3} ${camera_link} ${camera_link/2}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+
+        <inertial>
+            <mass value="1e-5" />
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
+    </link>
+
+    <joint name="base_to_camera" type="fixed">
+        <axis xyz="0 1 0" />
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+        <origin rpy="0 0 0" xyz="0.45 0 0.72"/>
+    </joint>
+
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_to_left_rear_wheel">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="base_to_right_rear_wheel">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+</robot>

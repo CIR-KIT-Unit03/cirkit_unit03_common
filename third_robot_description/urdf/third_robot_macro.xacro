@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot name="origins" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Constants for math -->
+    <xacro:property name="PI" value="3.1415926535897931" />
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="length_wheel" value="0.07" />
+    <xacro:property name="radius_wheel" value="0.14" />
+    <xacro:property name="base_center_x" value="0.015" />
+    <xacro:property name="length_from_base_center_to_wheel_x" value="0.395" />
+    <xacro:property name="length_from_base_to_wheel_front_x" value="0.41" />
+    <xacro:property name="length_from_base_to_wheel_rear_x" value="0.38" />
+    <xacro:property name="length_from_base_to_wheel_y" value="0.25" />
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+            <mass value="${mass}" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
+    </xacro:macro>
+
+    <!-- wheel macro -->
+    <xacro:macro name="wheel" params="right_left reflect_right_left front_rear reflect_front_rear">
+        <link name="${right_left}_${front_rear}_wheel">
+            <visual>
+                <!-- when reflect_right_left = 1 to be 0 reflect_right_left= -1 to be PI -->
+                <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/>
+                <!-- <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/> -->
+                <geometry>
+                    <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+                </geometry>
+                ->
+            </visual>
+            <collision>
+                <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+                </geometry>
+            </collision>
+            <xacro:default_inertial mass="1"/>
+        </link>
+        <joint name="base_to_${right_left}_${front_rear}_wheel" type="continuous">
+            <axis xyz="0 1 0"/>
+            <parent link="base_link"/>
+            <child link="${right_left}_${front_rear}_wheel"/>
+            <origin xyz="${base_center_x+reflect_front_rear*length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} ${radius_wheel}"/>
+        </joint>
+
+        <transmission name="tran_${right_left}_${front_rear}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="base_to_${right_left}_${front_rear}_wheel">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${right_left}_${front_rear}">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+</robot>
+
