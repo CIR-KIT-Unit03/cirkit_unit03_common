@@ -1,7 +1,7 @@
 TrajectoryPlannerROS:
-  max_vel_x: 5.0
+  max_vel_x: 1.0
   min_vel_x: -0.50
-  max_rotational_vel: 1.0
+  max_rotational_vel: 1.5
   min_in_place_rotational_vel: 1.0
 
   acc_lim_th: 3.2
@@ -13,12 +13,12 @@ TrajectoryPlannerROS:
   oscillation_reset_dist: 0.5
   escape_vel: -0.5
   
-  sim_time: 3.0
-  sim_granularity: 0.2
+  sim_time: 5.0
+  sim_granularity: 0.3
   vx_samples: 10
 
   occdist_scale: 0.01
 
   planner_frequency: 1.0
 
-  publish_cost_grid_pc: true
+  publish_cost_grid_pc: false
