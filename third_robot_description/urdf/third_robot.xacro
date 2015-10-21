@@ -111,7 +111,7 @@
         <child link="camera_link"/>
         <origin rpy="0 0 0" xyz="0.45 0 0.72"/>
     </joint>
-<!--
+
     <transmission name="tran1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_to_left_rear_wheel">
@@ -133,5 +133,5 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
--->
+
 </robot>
