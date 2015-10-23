@@ -77,7 +77,7 @@
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
         <child link="rear_bottom_lrf"/>
-        <origin xyz="-0.45 0 0.35"/>
+        <origin  rpy="0 0 ${PI}" xyz="-0.45 0 0.35"/>
     </joint>
     
     
