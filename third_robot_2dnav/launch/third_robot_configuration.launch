@@ -11,6 +11,14 @@
 	  <remap from="hokuyo_node" to="hokuyo_node1" />
 	  <remap from="scan" to="base_scan1" />
 	</node>
+
+ 	<param name="hokuyo_node2/port" value="/dev/sensors/hokuyo_H0807317"/>
+	<param name="hokuyo_node2/frame_id" value="rear_bottom_lrf"/>
+	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node2" output="screen">
+	  <remap from="hokuyo_node" to="hokuyo_node2" />
+	  <remap from="scan" to="base_scan2" />
+	</node>
+
 	<!-- <node pkg="lrf_tcp_ip" type="lrf_tcp_ip_node" name="lrf_tcp_ip" output="screen"> -->
 	<!--   <param name="LRFportname" value="192.168.0.20" /> -->
 	<!--   <parma name="isIntensity" value="false" /> -->

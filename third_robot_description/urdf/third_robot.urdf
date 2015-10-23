@@ -5,7 +5,7 @@
       <geometry>
         <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_body.dae"/>
       </geometry>
-	  <origin rpy="0 0 0" xyz="0 0 0.55" />
+	  <origin rpy="0 0 0" xyz="0.38 0 0.55" />
     </visual>
   </link>
 
@@ -22,7 +22,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="right_front_wheel"/>
-    <origin xyz="0.41 -0.25 0.14"/>
+    <origin xyz="0.79 -0.25 0.14"/>
   </joint>
 
   <link name="left_front_wheel">
@@ -38,7 +38,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="left_front_wheel"/>
-    <origin xyz="0.41 0.25 0.14"/>
+    <origin xyz="0.79 0.25 0.14"/>
   </joint>
 
   <link name="right_rear_wheel">
@@ -54,7 +54,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="right_rear_wheel"/>
-    <origin xyz="-0.38 -0.25 0.14"/>
+    <origin xyz="0 -0.25 0.14"/>
   </joint>
 
   <link name="left_rear_wheel">
@@ -70,7 +70,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="left_rear_wheel"/>
-    <origin xyz="-0.38 0.25 0.14"/>
+    <origin xyz="0 0.25 0.14"/>
   </joint>
 
   <link name="front_top_lrf">
@@ -86,7 +86,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="front_top_lrf"/>
-    <origin rpy="0 0.53 0" xyz="0.40 0 0.75"/>
+    <origin rpy="0 0.53 0" xyz="0.78 0 0.75"/>
   </joint>
 
   <link name="front_bottom_lrf">
@@ -102,7 +102,7 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="front_bottom_lrf"/>
-    <origin xyz="0.50 0 0.39"/>
+    <origin xyz="0.88 0 0.39"/>
   </joint>
 
   <link name="rear_bottom_lrf">
@@ -110,7 +110,7 @@
       <geometry>
 		<mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
         </geometry>
-      <origin rpy="0 0 3.14" xyz="0 0 0"/>
+      <origin rpy="0 0 3.1416" xyz="0 0 0"/>
     </visual>
   </link>
   
@@ -118,7 +118,17 @@
 	<axis xyz="0 1 0"/>
     <parent link="base_link"/>
     <child link="rear_bottom_lrf"/>
-    <origin xyz="-0.45 0 0.35"/>
+    <origin rpy="0 0 3.1416" xyz="-0.07 0 0.39"/>
+  </joint>
+
+  <link name="merged_lrf">
+  </link>
+
+  <joint name="base_to_merged_lrf" type="fixed">
+	<axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="merged_lrf"/>
+    <origin rpy="0 0 0" xyz="0 0 0.39"/>
   </joint>
 
 </robot>

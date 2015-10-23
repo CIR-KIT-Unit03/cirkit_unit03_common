@@ -7,6 +7,8 @@
   </include>
 
   <include file="$(find third_robot_lower_step_detector)/launch/lower_step_detector.launch" />
+  
+  <include file="$(find third_robot_merge_laser)/launch/third_robot_laserscan_merger.launch" />
 
   <include file="$(find third_robot_2dnav)/launch/move_base.launch"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find third_robot_2dnav)/config/autorun.rviz" required="true" />
