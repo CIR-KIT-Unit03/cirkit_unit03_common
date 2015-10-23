@@ -6,7 +6,9 @@
   <!-- 戸畑キャンパス  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata20141018.yaml" />; -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510110332.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" /> -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510232204-2.yaml" />
+
   <!-- ものつくり工房  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
   
