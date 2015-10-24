@@ -9,7 +9,6 @@ Panels:
         - /RobotModel1/Links1
         - /Path1/Offset1
         - /LaserScan5
-        - /PointCloud22/Status1
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -87,6 +86,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        merged_lrf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         rear_bottom_lrf:
           Alpha: 1
           Show Axes: false
@@ -193,6 +196,8 @@ Visualization Manager:
           Value: true
         map:
           Value: true
+        merged_lrf:
+          Value: true
         odom:
           Value: true
         rear_bottom_lrf:
@@ -217,6 +222,8 @@ Visualization Manager:
               left_front_wheel:
                 {}
               left_rear_wheel:
+                {}
+              merged_lrf:
                 {}
               rear_bottom_lrf:
                 {}
@@ -296,7 +303,7 @@ Visualization Manager:
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 0.75
-        Min Value: -0.0239277
+        Min Value: -0.241159
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -395,7 +402,7 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz/LaserScan
-      Color: 85; 170; 0
+      Color: 255; 0; 255
       Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
@@ -409,7 +416,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.1
+      Size (m): 0.3
       Style: Flat Squares
       Topic: /scan_multi
       Use Fixed Frame: true
@@ -468,22 +475,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 9.2776
+      Distance: 20.8607
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
+        X: 0.301926
+        Y: 4.98476
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.0297974
+      Pitch: 1.0804
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 1.36541
+      Yaw: 1.4904
     Saved: ~
 Window Geometry:
   Displays:
@@ -501,5 +508,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 55
+  X: 47
   Y: 14
