@@ -8,7 +8,7 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510110332.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510232204-2.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" /> -->
 
   <!-- ものつくり工房  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
@@ -18,6 +18,9 @@
   
   <!-- Tsukuba Challenge 2014  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" /> -->
+
+  <!-- Tsukuba Challenge 2015  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511031134.yaml" /> 
 
   <!-- Tsukuba Kenshu Center -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/kenshu_center.yaml" /> -->
