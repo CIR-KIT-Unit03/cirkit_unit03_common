@@ -12,8 +12,8 @@
 	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node1" output="screen">
 	  <remap from="hokuyo_node" to="hokuyo_node1" />
 	  <remap from="scan" to="base_scan1" />
-	  <param name="min_ang" type="double" value="-2.0" />
-      <param name="max_ang" type="double" value="2.0" />
+	  <!-- <param name="min_ang" type="double" value="-2.0" /> -->
+      <!-- <param name="max_ang" type="double" value="2.0" /> -->
 	</node>
 
  	<param name="hokuyo_node2/port" value="/dev/sensors/hokuyo_H0807317"/>
