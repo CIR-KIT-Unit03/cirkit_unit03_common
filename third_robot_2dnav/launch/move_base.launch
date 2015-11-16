@@ -21,7 +21,8 @@
 
   <!-- Tsukuba Challenge 2015  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511031134.yaml" />  -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511042000.yaml" /> 
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511042000.yaml" />  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511080238.yaml" /> 
 
 
   <!-- Tsukuba Kenshu Center -->

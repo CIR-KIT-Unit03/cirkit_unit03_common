@@ -10,8 +10,10 @@
   
   <include file="$(find third_robot_merge_laser)/launch/third_robot_laserscan_merger.launch" />
 
+  <include file="$(find third_robot_avoidance_limiter)/launch/avoidance_limiter.launch" />
+
   <include file="$(find third_robot_2dnav)/launch/move_base.launch"/>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find third_robot_2dnav)/config/autorun.rviz" required="true" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find third_robot_2dnav)/config/autorun2.rviz" required="true" />
   
 
 </launch>
