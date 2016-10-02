@@ -57,6 +57,22 @@
         </visual>
     </link>
 
+    <link name="steer">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_steer" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="steer"/>
+        <origin xyz="0.41 0 0.14"/>
+    </joint>
+
     <joint name="base_to_front_bottom_lrf" type="fixed">
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
