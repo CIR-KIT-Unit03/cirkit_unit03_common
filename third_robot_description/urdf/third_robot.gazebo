@@ -27,7 +27,7 @@
 
   <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-          <robotNamespace>/third_robot</robotNamespace>
+          <!-- <robotNamespace>/third_robot</robotNamespace> -->
           <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       </plugin>
   </gazebo>
@@ -157,6 +157,7 @@
       </plugin>
   </gazebo>
   -->
+  <!--
   <gazebo>
       <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
           <updateRate>100.0</updateRate>
@@ -172,9 +173,9 @@
           <robotBaseFrame>base_link</robotBaseFrame>
           <torque>20</torque>
           <topicName>cmd_vel</topicName>
-          <!-- <broadcastTF>false</broadcastTF> -->
       </plugin>
   </gazebo>
+  -->
 
   <!-- camera -->
   <gazebo reference="camera_link">
