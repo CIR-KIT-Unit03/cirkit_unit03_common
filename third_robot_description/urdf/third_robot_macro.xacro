@@ -58,5 +58,68 @@
         </transmission>
     </xacro:macro>
 
+    <!-- front wheel macro -->
+    <xacro:macro name="front_wheel" params="right_left reflect_right_left">
+        <!-- steer_right -->
+        <link name="steer_${right_left}">
+            <visual>
+                <origin rpy="0 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+                </geometry>
+            </visual>
+            <inertial>
+                <mass value="1.0" />
+                <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                    iyy="1.0" iyz="0.0"
+                    izz="1.0" />
+            </inertial>
+        </link>
+
+        <joint name="base_to_steer_${right_left}" type="continuous">
+            <axis xyz="0 0 1"/>
+            <parent link="base_link"/>
+            <child link="steer_${right_left}"/>
+        <origin xyz="${base_center_x+length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} 0.30"/>
+        </joint>
+
+        <link name="${right_left}_front_wheel">
+            <visual>
+                <!-- when reflect_right_left = 1 to be 0 reflect_right_left= -1 to be PI -->
+                <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/>
+                <!-- <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/> -->
+                <geometry>
+                    <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+                </geometry>
+                ->
+            </visual>
+            <collision>
+                <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+                </geometry>
+            </collision>
+            <xacro:default_inertial mass="1"/>
+        </link>
+        <joint name="base_to_${right_left}_front_wheel" type="continuous">
+            <axis xyz="0 1 0"/>
+            <parent link="steer_${right_left}"/>
+            <child link="${right_left}_front_wheel"/>
+            <!-- <origin xyz="${base_center_x+length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} ${radius_wheel}"/> -->
+            <origin xyz="0 0 -0.15"/>
+        </joint>
+
+        <transmission name="tran_${right_left}_front">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="base_to_${right_left}_front_wheel">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${right_left}_front">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
 </robot>
 
