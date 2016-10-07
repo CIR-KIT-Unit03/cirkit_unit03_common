@@ -76,7 +76,7 @@
             </inertial>
         </link>
 
-        <joint name="base_to_steer_${right_left}" type="continuous">
+        <joint name="base_to_${right_left}_front_steer" type="continuous">
             <axis xyz="0 0 1"/>
             <parent link="base_link"/>
             <child link="steer_${right_left}"/>
