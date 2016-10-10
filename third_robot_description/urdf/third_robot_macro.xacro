@@ -106,7 +106,7 @@
             <parent link="steer_${right_left}"/>
             <child link="${right_left}_front_wheel"/>
             <!-- <origin xyz="${base_center_x+length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} ${radius_wheel}"/> -->
-            <origin xyz="0 0 -0.15"/>
+            <origin xyz="0 0 -0.16"/>
         </joint>
 
         <transmission name="tran_${right_left}_front">
