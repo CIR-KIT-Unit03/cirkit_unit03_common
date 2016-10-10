@@ -26,8 +26,8 @@
     </link>
 
     <!-- wheels -->
-    <xacro:wheel right_left="right" reflect_right_left="1" front_rear="front" reflect_front_rear="1"/>
-    <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="front" reflect_front_rear="1"/>
+    <xacro:front_wheel right_left="right" reflect_right_left="1"/>
+    <xacro:front_wheel right_left="left" reflect_right_left="-1"/>
     <xacro:wheel right_left="right" reflect_right_left="1" front_rear="rear" reflect_front_rear="-1"/>
     <xacro:wheel right_left="left" reflect_right_left="-1" front_rear="rear" reflect_front_rear="-1"/>
 
@@ -63,7 +63,8 @@
       <child link="front_top_3durg"/>
       <origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>
     </joint>
-    
+
+    <!-- front_bottom_lrf -->
     <link name="front_bottom_lrf">
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -80,6 +81,49 @@
         <origin xyz="0.50 0 0.39"/>
     </joint>
 
+    <!-- steer -->
+    <link name="steer">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_to_steer" type="fixed">
+        <axis xyz="0 1 0"/>
+        <parent link="base_link"/>
+        <child link="steer"/>
+        <origin xyz="0.41 0 0.14"/>
+    </joint>
+
+    <!-- steer_left -->
+    <!--
+    <link name="steer_left">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+            </geometry>
+        </visual>
+        <inertial>
+            <mass value="1.0" />
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
+    </link>
+
+    <joint name="base_to_steer_left" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="base_link"/>
+        <child link="steer_left"/>
+        <origin xyz="0.41 0.25 0.34"/>
+    </joint>
+    -->
+
+    <!-- rear_bottom_lrf -->
     <link name="rear_bottom_lrf">
       <visual>
         <origin rpy="0 0 ${PI}" xyz="0 0 0"/>
