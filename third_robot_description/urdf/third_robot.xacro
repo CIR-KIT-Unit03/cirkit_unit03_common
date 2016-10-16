@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot name="origins" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
+    <xacro:property name="M_PI" value="3.14159274"/>
     <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
     <!-- Import all Gazebo-customization elements, including Gazebo colors -->
     <xacro:include filename="$(find third_robot_description)/urdf/third_robot.gazebo" />
@@ -61,7 +61,8 @@
       <axis xyz="0 1 0"/>
       <parent link="base_link"/>
       <child link="front_top_3durg"/>
-      <origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>
+      <origin rpy="${M_PI} 0 0" xyz="0.40 0 0.75"/>
+      <!--<origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>-->
     </joint>
 
     <!-- front_bottom_lrf -->
