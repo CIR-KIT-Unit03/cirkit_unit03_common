@@ -65,14 +65,7 @@
       <!--<origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>-->
     </joint>
 
-    <link name="front_top_3durg_rgbd_optical_frame">
-      <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-          <mesh filename="package://third_robot_description/meshes/3DURG/hokuyo3durg.dae"/>
-        </geometry>
-      </visual>
-    </link>
+    <link name="front_top_3durg_rgbd_optical_frame"/>
 
     <joint name="front_top_3durg_to_rgbd_optical_frame" type="fixed">
       <axis xyz="0 1 0"/>
