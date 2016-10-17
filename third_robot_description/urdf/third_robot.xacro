@@ -60,9 +60,7 @@
       <axis xyz="0 1 0"/>
       <parent link="base_link"/>
       <child link="front_top_3durg"/>
-      <origin rpy="0 0 0" xyz="0.40 0 0.75"/>
-      <!-- <origin rpy="${M_PI} 0 0" xyz="0.40 0 0.75"/>-->
-      <!--<origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>-->
+      <origin rpy="${PI} 0 0" xyz="0.40 0 0.75"/>
     </joint>
 
     <link name="front_top_3durg_rgbd_optical_frame"/>
@@ -72,9 +70,6 @@
       <parent link="front_top_3durg"/>
       <child link="front_top_3durg_rgbd_optical_frame"/>
       <origin rpy="${PI/2} ${PI} ${PI/2}"/>
-      <!-- <origin rpy="0 ${M_PI*0.5} 0" xyz="0.0 0.0 0.0"/> -->
-      <!-- <origin rpy="${M_PI} 0 0" xyz="0.40 0 0.75"/>-->
-      <!--<origin rpy="3.14159 0 0" xyz="0.40 0 0.75"/>-->
     </joint>
 
     <!-- front_bottom_lrf -->
