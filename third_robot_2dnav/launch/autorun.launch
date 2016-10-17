@@ -1,4 +1,4 @@
 <launch>
   <include file="$(find third_robot_bringup)/launch/third_robot_bringup.launch"/>
-  <include file="$(find third_robot_2dnav)/launch/third_robot_configuration.launch"/>
+  <include file="$(find third_robot_2dnav)/launch/move_base.launch"/>
 </launch>
