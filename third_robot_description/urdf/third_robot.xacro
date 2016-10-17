@@ -95,14 +95,7 @@
     </joint>
 
     <!-- steer -->
-    <link name="steer">
-        <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <geometry>
-                <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
-            </geometry>
-        </visual>
-    </link>
+    <link name="steer"/>
 
     <joint name="base_to_steer" type="fixed">
         <axis xyz="0 1 0"/>
