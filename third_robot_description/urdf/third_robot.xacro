@@ -49,7 +49,7 @@
     <!-- lrf -->
     <link name="front_top_3durg">
       <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin rpy="0 0 0" xyz="-0.10 0 0"/>
         <geometry>
           <mesh filename="package://third_robot_description/meshes/3DURG/hokuyo3durg.dae"/>
         </geometry>
@@ -172,6 +172,16 @@
       <origin rpy="0 0 0" xyz="0.45 0 0.72"/>
     </joint>
 
+    <joint name="base_to_merged_lrf" type="fixed">
+      <axis xyz="0 1 0"/>
+      <parent link="base_link" />
+      <child link="merged_lrf" />
+      <origin rpy="0 0 0" xyz="0 0 0.39"/>
+    </joint>
+
+    <link name="merged_lrf">
+    </link>
+    
     <transmission name="tran1">
       <type>transmission_interface/SimpleTransmission</type>
         <joint name="base_to_left_rear_wheel">
