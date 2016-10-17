@@ -150,7 +150,8 @@
               <image>
                   <width>640</width>
                   <height>480</height>
-                  <format>R8G8B8</format>
+                  <!--<format>R8G8B8</format>-->
+                  <format>B8G8R8</format>
               </image>
               <depth_camera>
 
@@ -164,8 +165,10 @@
               <alwaysOn>true</alwaysOn>
               <updateRate>10.0</updateRate>
               <cameraName>camera</cameraName>
+              <!--
               <frameName>front_top_3durg</frameName>                   
-              <frameName>rear_bottom_lrf</frameName>
+              -->
+              <frameName>front_top_3durg_rgbd_optical_frame</frameName>
               <imageTopicName>rgb/image_raw</imageTopicName>
               <depthImageTopicName>depth/image_raw</depthImageTopicName>
               <pointCloudTopicName>depth/points</pointCloudTopicName>
