@@ -62,12 +62,6 @@
     <xacro:macro name="front_wheel" params="right_left reflect_right_left">
         <!-- steer_right -->
         <link name="steer_${right_left}">
-            <visual>
-                <origin rpy="0 0 0" xyz="0 0 0"/>
-                <geometry>
-                    <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
-                </geometry>
-            </visual>
             <inertial>
                 <mass value="1.0" />
                 <inertia ixx="1.0" ixy="0.0" ixz="0.0"
