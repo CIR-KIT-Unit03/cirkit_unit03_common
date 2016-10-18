@@ -8,7 +8,7 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510110332.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510232204-2.yaml" /> -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" /> -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" />
 
   <!-- ものつくり工房  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
@@ -16,7 +16,7 @@
   <!-- 教育研究4号棟2階  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" /> -->
   <!-- 教育研究４号棟一階広場 -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/garden.yaml" />
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/garden.yaml" /> -->
   <!-- Tsukuba Challenge 2014  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" /> -->
 
