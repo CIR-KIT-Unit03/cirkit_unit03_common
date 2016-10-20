@@ -9,7 +9,7 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510232204-2.yaml" /> -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata2016.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata2016-gmapping-edited.yaml" />
   <!-- ものつくり工房  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
   
@@ -42,6 +42,7 @@
     <rosparam file="$(find third_robot_2dnav)/params/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find third_robot_2dnav)/params/base_local_planner_params.yaml" command="load" />
     <!-- <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> -->
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="controller_frequency" value="5.0" />
     <param name="controller_patience" value="15.0" />
     <param name="max_planning_retries" value="10" />
