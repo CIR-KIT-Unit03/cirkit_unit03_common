@@ -3,43 +3,16 @@
 
   <!-- Run the map server -->
   
-  <!-- 戸畑キャンパス  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tobata20141018.yaml" />; -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510110332.yaml" /> -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510210032-multi-scan.yaml" /> -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510232204-2.yaml" /> -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201510240538.yaml" /> -->
+  <!-- clearpath_playpen  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav_gazebo)/map/clearpath_playpen.yaml" />
 
-  <!-- ものつくり工房  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/monotsukuri141031.yaml" /> -->
-  
-  <!-- 教育研究4号棟2階  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" /> -->
-  <!-- 教育研究４号棟一階広場 -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/garden.yaml" />
-  <!-- Tsukuba Challenge 2014  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/fullmap.yaml" /> -->
-
-  <!-- Tsukuba Challenge 2015  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511031134.yaml" />  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511042000.yaml" />  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511080238.yaml" />  -->
-
-
-  <!-- Tsukuba Kenshu Center -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/kenshu_center.yaml" /> -->
-
-  <!--- Run URG filter-->
-  <include file="$(find third_robot_urg_filter)/launch/urg_laser_filter.launch" />
-
-  <!--- Run AMCL -->
-  <include file="$(find third_robot_2dnav)/amcl/amcl_diff.launch" />
+  <node pkg="topic_tools" type="relay" name="relay_cmd_vel" args="/cmd_vel /steer_drive_controller/cmd_vel"/>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find third_robot_2dnav)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find third_robot_2dnav)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find third_robot_2dnav)/params/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find third_robot_2dnav)/params/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find third_robot_2dnav)/params/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find third_robot_2dnav_gazebo)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find third_robot_2dnav_gazebo)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find third_robot_2dnav_gazebo)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find third_robot_2dnav_gazebo)/params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find third_robot_2dnav_gazebo)/params/base_local_planner_params.yaml" command="load" />
   </node>
 </launch>
