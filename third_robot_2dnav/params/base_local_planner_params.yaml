@@ -37,14 +37,14 @@ step_back_and_max_steer_recovery:
     trial_times         : 3
     # 障害物までの許容距離[m]．
     #-- 移動中に，移動方向に対して最も近い障害物がこの距離以内に出現したら停止する．
-    obstacle_patience   : 0.3
+    obstacle_patience   : 0.5
     #-- 移動中に，障害物を確認する頻度[回/sec]
     obstacle_check_frequency: 5.0
     # 障害物探索時の角度の分解能[rad] costmapアクセス数を低減したいときに調整する．
     sim_angle_resolution: 0.1
     # back(初回後退時の速度[m/s], 移動距離[m], タイムアウト[sec])
     linear_vel_back     : -1.5
-    step_back_length    : 1.5
+    step_back_length    : 0.6
     step_back_timeout   : 15.0
     # steer(旋回時の直進速度[m/s], 回転速さ(環境に寄って±が変わる)[rad/s], 目標回転角度[rad], タイムアウト[sec])
     linear_vel_steer    : 0.3
@@ -181,7 +181,7 @@ DWAPlannerROS:
   # goal_distance_bias: 24.0 # The weighting for how much the controller should attempt to reach its local goal, also controls speed
   occdist_scale: 0.2 # The weighting for how much the controller should attempt to avoid obstacles
   # forward_point_distance: 0.325 # The distance from the center point of the robot to place an additional scoring point, in meters
-  # stop_time_buffer: 0.2  # The amount of time that the robot must stThe absolute value of the veolicty at which to start scaling the robot's footprint, in m/sop before a collision in order for a trajectory to be considered valid in seconds
+  stop_time_buffer: 3.0  # The amount of time that the robot must stThe absolute value of the veolicty at which to start scaling the robot's footprint, in m/sop before a collision in order for a trajectory to be considered valid in seconds
   # scaling_speed: 0.25 # The absolute value of the veolicty at which to start scaling the robot's footprint, in m/s
   # max_scaling_factor: 0.2 # The maximum factor to scale the robot's footprint by
 
