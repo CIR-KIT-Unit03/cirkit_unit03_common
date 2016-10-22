@@ -27,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: MergedCloud
+    SyncSource: LaserScanMuti
 Visualization Manager:
   Class: ""
   Displays:
@@ -400,11 +400,11 @@ Visualization Manager:
         - Arrow Length: 0.3
           Class: rviz/PoseArray
           Color: 255; 25; 0
-          Enabled: true
+          Enabled: false
           Name: PoseArray
           Topic: /particlecloud
           Unreliable: false
-          Value: true
+          Value: false
         - Alpha: 0.7
           Class: rviz/Map
           Color Scheme: map
@@ -567,5 +567,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1659
-  X: 96
-  Y: 154
+  X: 86
+  Y: 144
