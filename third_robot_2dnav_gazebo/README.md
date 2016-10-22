@@ -5,6 +5,9 @@
 - ~~[デモ動画（NG）](https://youtu.be/t8RvtNwTC90)~~
 - [デモ動画（OK）](https://youtu.be/6OA_49ULO2A)
 
+[![](.fig/demo.png)](https://www.youtube.com/watch?v=6OA_49ULO2A&feature=youtu.be)
+
+
 ## 使い方
 - amcl の自己位置推定
 
