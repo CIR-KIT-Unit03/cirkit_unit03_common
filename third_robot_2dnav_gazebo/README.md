@@ -1,6 +1,4 @@
 # Third Robot 2d Navigation gazebo
-![DEMO](.fig/demo.png)
-
 ## 雰囲気
 - ~~[デモ動画（NG）](https://youtu.be/t8RvtNwTC90)~~
 - [デモ動画（OK）](https://youtu.be/6OA_49ULO2A)
