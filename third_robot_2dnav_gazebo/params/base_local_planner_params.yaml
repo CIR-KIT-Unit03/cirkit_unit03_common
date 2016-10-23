@@ -135,7 +135,7 @@ TebLocalPlannerROS:
     #   vertices: [[1.00, 0.45], [1.00, -0.45], [-0.15, -0.45], [-0.15, 0.45]] # for type "polygon"
     #   footprint: [[0.55, 0.35], [0.55, -0.35], [-0.55, -0.35], [-0.55, 0.35]] #third
     #
-    # # GoalTolerance
+    # GoalTolerance
     #    
     # xy_goal_tolerance: 1.0
     # yaw_goal_tolerance: 0.5
@@ -146,15 +146,15 @@ TebLocalPlannerROS:
     # min_obstacle_dist: 0.25 # This value must also include our robot's expansion, since footprint_model is set to "line".
     # include_costmap_obstacles: True
     # costmap_obstacles_behind_robot_dist: 1.0
-    obstacle_poses_affected: 20
+    obstacle_poses_affected: 15
     # costmap_converter_plugin: ""
     # costmap_converter_spin_thread: True
     # costmap_converter_rate: 5
     
     # Optimization
         
-    no_inner_iterations: 4
-    no_outer_iterations: 3
+    no_inner_iterations: 3
+    no_outer_iterations: 2
     # optimization_activate: True
     # optimization_verbose: False
     # penalty_epsilon: 0.1
