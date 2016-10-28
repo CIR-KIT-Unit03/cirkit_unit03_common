@@ -4,7 +4,7 @@
   <!-- Run the map server -->
   
   <!-- clearpath_playpen  -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav_gazebo)/maps/playpen_map.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav_gazebo)/map/playpen_map.yaml" />
 
   <node pkg="topic_tools" type="relay" name="relay_cmd_vel" args="/cmd_vel /steer_drive_controller/cmd_vel"/>
 
