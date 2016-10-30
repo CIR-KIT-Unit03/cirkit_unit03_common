@@ -11,6 +11,7 @@ Panels:
         - /Path4
         - /PointCloud24
         - /PointCloud25
+        - /BoundingBoxArray1
       Splitter Ratio: 0.5
     Tree Height: 463
   - Class: rviz/Selection
@@ -608,6 +609,26 @@ Visualization Manager:
       Topic: /move_base/NavfnROS/plan
       Unreliable: false
       Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /reach_threshold_markers
+      Name: MarkerArray
+      Namespaces:
+        "": true
+      Queue Size: 100
+      Value: true
+    - Class: jsk_rviz_plugin/BoundingBoxArray
+      Enabled: true
+      Name: BoundingBoxArray
+      Topic: /recognized_result
+      Unreliable: false
+      Value: true
+      alpha: 0.8
+      color: 25; 255; 0
+      coloring: Auto
+      line width: 0.005
+      only edge: false
+      show coords: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -632,20 +653,20 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 70.1443
+      Distance: 114.688
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 58.6689
-        Y: 53.3482
+        X: -8.3976
+        Y: 0.0910554
         Z: -1.44352e-05
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 1.5698
-      Target Frame: map
+      Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
       Yaw: 3.1754
     Saved: ~
