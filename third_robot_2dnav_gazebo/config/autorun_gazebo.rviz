@@ -7,6 +7,8 @@ Panels:
         - /RobotModel1/Links1
         - /Sensing1
         - /Navigation1
+        - /teb_localplanner1
+        - /dwa_localplanner1
       Splitter Ratio: 0.5
     Tree Height: 721
   - Class: rviz/Selection
@@ -433,36 +435,6 @@ Visualization Manager:
           Unreliable: false
           Value: true
         - Alpha: 1
-          Buffer Length: 1
-          Class: rviz/Path
-          Color: 25; 255; 0
-          Enabled: true
-          Line Style: Lines
-          Line Width: 0.03
-          Name: GobalPathPlan
-          Offset:
-            X: 0
-            Y: 0
-            Z: 0
-          Topic: /move_base/TebLocalPlannerROS/global_plan
-          Unreliable: false
-          Value: true
-        - Alpha: 1
-          Buffer Length: 1
-          Class: rviz/Path
-          Color: 255; 85; 255
-          Enabled: true
-          Line Style: Billboards
-          Line Width: 0.5
-          Name: LocalPathPlan
-          Offset:
-            X: 0
-            Y: 0
-            Z: 0
-          Topic: /move_base/TebLocalPlannerROS/local_plan
-          Unreliable: false
-          Value: true
-        - Alpha: 1
           Class: rviz/Polygon
           Color: 25; 255; 0
           Enabled: true
@@ -510,6 +482,102 @@ Visualization Manager:
           Value: false
       Enabled: true
       Name: Navigation
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Head Diameter: 0.3
+          Head Length: 0.2
+          Length: 0.3
+          Line Style: Lines
+          Line Width: 0.03
+          Name: GobalPathPlan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Style: None
+          Radius: 0.03
+          Shaft Diameter: 0.1
+          Shaft Length: 0.1
+          Topic: /move_base/TebLocalPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 85; 255
+          Enabled: true
+          Head Diameter: 0.3
+          Head Length: 0.2
+          Length: 0.3
+          Line Style: Billboards
+          Line Width: 0.5
+          Name: LocalPathPlan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Style: None
+          Radius: 0.03
+          Shaft Diameter: 0.1
+          Shaft Length: 0.1
+          Topic: /move_base/TebLocalPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: teb_localplanner
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 85; 255
+          Enabled: true
+          Head Diameter: 0.3
+          Head Length: 0.2
+          Length: 0.3
+          Line Style: Lines
+          Line Width: 0.03
+          Name: GlobalPathPlan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Style: None
+          Radius: 0.03
+          Shaft Diameter: 0.1
+          Shaft Length: 0.1
+          Topic: /move_base/DWAPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 85; 255
+          Enabled: true
+          Head Diameter: 0.3
+          Head Length: 0.2
+          Length: 0.3
+          Line Style: Lines
+          Line Width: 0.03
+          Name: LocalPathPlan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Style: None
+          Radius: 0.03
+          Shaft Diameter: 0.1
+          Shaft Length: 0.1
+          Topic: /move_base/DWAPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: dwa_localplanner
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -546,10 +614,10 @@ Visualization Manager:
         Z: 8.04663e-07
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.0348
+      Pitch: 1.4398
       Target Frame: map
       Value: ThirdPersonFollower (rviz)
-      Yaw: 0.670408
+      Yaw: 0.500408
     Saved: ~
 Window Geometry:
   Displays:
@@ -567,5 +635,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1659
-  X: 66
-  Y: 124
+  X: 56
+  Y: 40
