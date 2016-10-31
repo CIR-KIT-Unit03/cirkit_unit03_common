@@ -136,6 +136,42 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
+        0:
+          Value: true
+        1:
+          Value: true
+        10:
+          Value: true
+        11:
+          Value: true
+        12:
+          Value: true
+        13:
+          Value: true
+        14:
+          Value: true
+        15:
+          Value: true
+        16:
+          Value: true
+        17:
+          Value: true
+        2:
+          Value: true
+        3:
+          Value: true
+        4:
+          Value: true
+        5:
+          Value: true
+        6:
+          Value: true
+        7:
+          Value: true
+        8:
+          Value: true
+        9:
+          Value: true
         All Enabled: true
         base_link:
           Value: true
@@ -176,6 +212,42 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
+          0:
+            {}
+          1:
+            {}
+          10:
+            {}
+          11:
+            {}
+          12:
+            {}
+          13:
+            {}
+          14:
+            {}
+          15:
+            {}
+          16:
+            {}
+          17:
+            {}
+          2:
+            {}
+          3:
+            {}
+          4:
+            {}
+          5:
+            {}
+          6:
+            {}
+          7:
+            {}
+          8:
+            {}
+          9:
+            {}
           odom:
             base_link:
               camera_link:
@@ -626,6 +698,15 @@ Visualization Manager:
           Name: trajectory_localplanner
       Enabled: true
       Name: Navigation
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /cube/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
