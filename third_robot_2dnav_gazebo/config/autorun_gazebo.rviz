@@ -526,7 +526,7 @@ Visualization Manager:
               Topic: /move_base/TebLocalPlannerROS/local_plan
               Unreliable: false
               Value: true
-          Enabled: true
+          Enabled: false
           Name: teb_localplanner
         - Class: rviz/Group
           Displays:
@@ -622,7 +622,7 @@ Visualization Manager:
               Topic: /move_base/TrajectoryPlannerROS/local_plan
               Unreliable: false
               Value: true
-          Enabled: true
+          Enabled: false
           Name: trajectory_localplanner
       Enabled: true
       Name: Navigation

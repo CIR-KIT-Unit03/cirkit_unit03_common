@@ -1,5 +1,5 @@
 <launch>
-    <include file="$(find steer_drive_controller)/launch/steer_drive_test_setting.launch"/>
+    <include file="$(find steer_drive_controller)/launch/steer_drive_test_setting.launch" />
 
     <node pkg="topic_tools" type="relay" name="relay_base_scan" args="/third_robot/laser/base_scan /base_scan"/>
     <node pkg="topic_tools" type="relay" name="relay_base_scan2" args="/third_robot/laser/base_scan2 /base_scan2"/>
