@@ -7,6 +7,8 @@ Panels:
         - /RobotModel1/Links1
         - /Sensing1
         - /Navigation1
+        - /Navigation1/teb_localplanner1
+        - /Navigation1/dwa_localplanner1
       Splitter Ratio: 0.5
     Tree Height: 721
   - Class: rviz/Selection
@@ -134,6 +136,42 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
+        0:
+          Value: true
+        1:
+          Value: true
+        10:
+          Value: true
+        11:
+          Value: true
+        12:
+          Value: true
+        13:
+          Value: true
+        14:
+          Value: true
+        15:
+          Value: true
+        16:
+          Value: true
+        17:
+          Value: true
+        2:
+          Value: true
+        3:
+          Value: true
+        4:
+          Value: true
+        5:
+          Value: true
+        6:
+          Value: true
+        7:
+          Value: true
+        8:
+          Value: true
+        9:
+          Value: true
         All Enabled: true
         base_link:
           Value: true
@@ -174,6 +212,42 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
+          0:
+            {}
+          1:
+            {}
+          10:
+            {}
+          11:
+            {}
+          12:
+            {}
+          13:
+            {}
+          14:
+            {}
+          15:
+            {}
+          16:
+            {}
+          17:
+            {}
+          2:
+            {}
+          3:
+            {}
+          4:
+            {}
+          5:
+            {}
+          6:
+            {}
+          7:
+            {}
+          8:
+            {}
+          9:
+            {}
           odom:
             base_link:
               camera_link:
@@ -433,36 +507,6 @@ Visualization Manager:
           Unreliable: false
           Value: true
         - Alpha: 1
-          Buffer Length: 1
-          Class: rviz/Path
-          Color: 25; 255; 0
-          Enabled: true
-          Line Style: Lines
-          Line Width: 0.03
-          Name: GobalPathPlan
-          Offset:
-            X: 0
-            Y: 0
-            Z: 0
-          Topic: /move_base/TebLocalPlannerROS/global_plan
-          Unreliable: false
-          Value: true
-        - Alpha: 1
-          Buffer Length: 1
-          Class: rviz/Path
-          Color: 255; 85; 255
-          Enabled: true
-          Line Style: Billboards
-          Line Width: 0.5
-          Name: LocalPathPlan
-          Offset:
-            X: 0
-            Y: 0
-            Z: 0
-          Topic: /move_base/TebLocalPlannerROS/local_plan
-          Unreliable: false
-          Value: true
-        - Alpha: 1
           Class: rviz/Polygon
           Color: 25; 255; 0
           Enabled: true
@@ -508,8 +552,161 @@ Visualization Manager:
           Use Fixed Frame: true
           Use rainbow: true
           Value: false
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 25; 255; 0
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Lines
+              Line Width: 0.03
+              Name: GobalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/TebLocalPlannerROS/global_plan
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 85; 255
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Billboards
+              Line Width: 0.5
+              Name: LocalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/TebLocalPlannerROS/local_plan
+              Unreliable: false
+              Value: true
+          Enabled: false
+          Name: teb_localplanner
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 85; 255
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Lines
+              Line Width: 0.03
+              Name: GlobalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/DWAPlannerROS/global_plan
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 85; 255
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Billboards
+              Line Width: 0.5
+              Name: LocalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/DWAPlannerROS/local_plan
+              Unreliable: false
+              Value: true
+          Enabled: true
+          Name: dwa_localplanner
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 85; 255
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Lines
+              Line Width: 0.03
+              Name: GlobalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/TrajectoryPlannerROS/global_plan
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 85; 255
+              Enabled: true
+              Head Diameter: 0.3
+              Head Length: 0.2
+              Length: 0.3
+              Line Style: Billboards
+              Line Width: 0.5
+              Name: LocalPathPlan
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Radius: 0.03
+              Shaft Diameter: 0.1
+              Shaft Length: 0.1
+              Topic: /move_base/TrajectoryPlannerROS/local_plan
+              Unreliable: false
+              Value: true
+          Enabled: false
+          Name: trajectory_localplanner
       Enabled: true
       Name: Navigation
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /cube/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -546,10 +743,10 @@ Visualization Manager:
         Z: 8.04663e-07
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.0348
+      Pitch: 1.5648
       Target Frame: map
       Value: ThirdPersonFollower (rviz)
-      Yaw: 0.670408
+      Yaw: 0.505408
     Saved: ~
 Window Geometry:
   Displays:
@@ -567,5 +764,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1659
-  X: 66
-  Y: 124
+  X: 55
+  Y: 14

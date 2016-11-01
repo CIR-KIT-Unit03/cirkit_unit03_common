@@ -48,12 +48,12 @@ step_back_and_max_steer_recovery:
     # back(初回後退時の速度[m/s], 移動距離[m], タイムアウト[sec])
     linear_vel_back     : -1.5
     step_back_length    : 1.5
-    step_back_timeout   : 15.0
+    step_back_timeout   : 10.0
     # steer(旋回時の直進速度[m/s], 回転速さ(環境に寄って±が変わる)[rad/s], 目標回転角度[rad], タイムアウト[sec])
     linear_vel_steer    : 0.3
     angular_speed_steer : 1.0
     turn_angle          : 0.78
-    steering_timeout    : 15.0
+    steering_timeout    : 10.0
         # forward(旋回→直進→旋回の直進時の速度[m/s], 目標移動距離[m])
     linear_vel_forward  : 0.3
     step_forward_length : 1.0
@@ -61,18 +61,18 @@ step_back_and_max_steer_recovery:
 
 DWAPlannerROS:
   # Robot configuration parameters  
-  acc_lim_x: 2.5
+  acc_lim_x: 4.0
   acc_lim_y: 0
-  acc_lim_th: 3.2
+  acc_lim_th: 4.0
 
   max_vel_x: 3.0
   min_vel_x: -0.5
-  max_vel_y: 0
+  max_vel_y: 3.0
   min_vel_y: 0
 
   max_trans_vel: 3.0
   min_trans_vel: 0.1
-  max_rot_vel: 1.5
+  max_rot_vel: 2.5
   min_rot_vel: 0.2
 
   # Goal Tolerance Parameters
