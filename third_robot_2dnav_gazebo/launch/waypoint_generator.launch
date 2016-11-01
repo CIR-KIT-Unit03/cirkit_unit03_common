@@ -1,0 +1,22 @@
+<launch>
+  <include file="$(find third_robot_gazebo)/launch/third_robot_clearpath_playpen.launch"/>
+
+  <!--include file="$(find third_robot_2dnav_gazebo)/launch/move_base.launch"/-->
+  <!--include file="$(find third_robot_2dnav_gazebo)/amcl/amcl_diff.launch" /-->
+
+  <node name="ros_waypoint_generator" pkg="ros_waypoint_generator" type="ros_waypoint_generator" />
+
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+    args="4 third_robot_2dnav_gazebo move_base.launch"
+    name="timed_roslaunch_move_base" output="screen">
+  </node>
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+    args="10 third_robot_2dnav_gazebo amcl_diff.launch"
+    name="timed_roslaunch_amcl" output="screen">
+  </node>
+  <!-- laserscan_merger should be executed after all launch files are called --> 
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+    args="1 third_robot_merge_laser third_robot_laserscan_merger.launch"
+    name="timed_roslaunch_merger" output="screen">
+  </node>
+</launch>
