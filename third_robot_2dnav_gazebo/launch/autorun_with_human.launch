@@ -14,8 +14,9 @@
       command="$(find xacro)/xacro.py '$(find human_model_gazebo)/urdf/human.xacro'" />
   <node name="urdf_spawner_human1" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
 	args="-urdf -model steerbot -param human_description -x 3.85 -y -5 -z 1.8"/>
-    <node pkg="topic_tools" type="relay" name="relay_base_cloud" args="/camera/depth/points /hokuyo3d/hokuyo_cloud2"/>
-
+    <!-- <node pkg="topic_tools" type="relay" name="relay_base_cloud" args="/camera/depth/points /hokuyo3d/hokuyo_cloud2"/> -->
+    <include file="$(find point_cloud_reducer)/launch/kinect_downsampler.launch"/>
+    
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
     args="6 third_robot_2dnav_gazebo amcl_diff.launch"
     name="timed_roslaunch_amcl" output="screen">
