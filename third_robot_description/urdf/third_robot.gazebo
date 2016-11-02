@@ -146,7 +146,7 @@
           <always_on>1</always_on>
           <visualize>true</visualize>             
           <camera>
-              <horizontal_fov>1.047</horizontal_fov>  
+              <horizontal_fov>2.8</horizontal_fov>  
               <image>
                   <width>640</width>
                   <height>480</height>
@@ -157,7 +157,7 @@
 
               </depth_camera>
               <clip>
-                  <near>0.1</near>
+                  <near>0.01</near>
                   <far>100</far>
               </clip>
           </camera>
