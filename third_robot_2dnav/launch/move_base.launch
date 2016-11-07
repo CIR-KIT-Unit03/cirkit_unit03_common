@@ -26,12 +26,13 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/201511080238.yaml" />  -->
   <!-- Tsukuba Challenge 2016  -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/ooshimizu.yaml" /> -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare2016_outside-2.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/tukutyare2016_outside-8.yaml" />
 
   <!-- Tsukuba Kenshu Center -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav)/map/kenshu_center.yaml" /> -->
   <!-- Waypoint marker -->
-  <node pkg="ros_waypoint_generator" type="ros_waypoint_server" name="ros_waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-05-03-19-32-with_search_area.csv" output="screen" />
+  
+  <node pkg="ros_waypoint_generator" type="ros_waypoint_server" name="ros_waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-06-11-32-09.csv" output="screen" />
   
   <!--- Run URG filter-->
   <include file="$(find third_robot_urg_filter)/launch/urg_laser_filter.launch" />
@@ -47,6 +48,7 @@
     <rosparam file="$(find third_robot_2dnav)/params/base_local_planner_params.yaml" command="load" />
     <!-- <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> -->
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <param name="base_global_planner" value="carrot_planner/CarrotPlanner" />
     <param name="controller_frequency" value="5.0" />
     <param name="controller_patience" value="15.0" />
     <param name="max_planning_retries" value="10" />
