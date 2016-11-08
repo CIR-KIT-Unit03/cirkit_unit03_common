@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>third_robot_2dnav_gazebo</name>
-  <version>0.0.0</version>
-  <description>The third_robot_2dnav for gazebo package</description>
+  <name>cirkit_unit03_navigation_gazebo</name>
+  <version>0.1.0</version>
+  <description>The cirkit_unit03_navigation for gazebo package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
