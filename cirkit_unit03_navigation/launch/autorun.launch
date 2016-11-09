@@ -1,6 +1,6 @@
 <launch>
   <include file="$(find third_robot_bringup)/launch/third_robot_bringup.launch"/>
-  <include file="$(find third_robot_2dnav)/launch/move_base.launch"/>
+  <include file="$(find cirkit_unit03_navigation)/launch/move_base.launch"/>
 
   <!-- <node name="third_robot_monitor_client" pkg="third_robot_monitor" type="third_robot_monitor_client"/> -->
 </launch>
