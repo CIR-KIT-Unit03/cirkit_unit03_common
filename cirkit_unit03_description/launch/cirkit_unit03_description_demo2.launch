@@ -1,0 +1,6 @@
+<launch>
+    <!-- <include file="$(find cirkit_unit03_description)/launch/cirkit_unit03_xacro.launch"> -->
+  <include file="cirkit_unit03_xacro.launch">
+	<arg name="model" value="$(find cirkit_unit03_description)/urdf/cirkit_unit03.xacro"/>
+  </include>
+</launch>
