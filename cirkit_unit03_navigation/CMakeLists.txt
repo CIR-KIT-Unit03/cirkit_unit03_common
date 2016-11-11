@@ -78,8 +78,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES third_robot_2dnav
-#  CATKIN_DEPENDS offset_urg_tf third_robot_driver
+#  LIBRARIES cirkit_unit03_2dnav
+#  CATKIN_DEPENDS offset_urg_tf cirkit_unit03_driver
 #  DEPENDS system_lib
 )
 
@@ -95,19 +95,19 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(third_robot_2dnav
-#   src/${PROJECT_NAME}/third_robot_2dnav.cpp
+# add_library(cirkit_unit03_2dnav
+#   src/${PROJECT_NAME}/cirkit_unit03_2dnav.cpp
 # )
 
 ## Declare a cpp executable
-# add_executable(third_robot_2dnav_node src/third_robot_2dnav_node.cpp)
+# add_executable(cirkit_unit03_2dnav_node src/cirkit_unit03_2dnav_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(third_robot_2dnav_node third_robot_2dnav_generate_messages_cpp)
+# add_dependencies(cirkit_unit03_2dnav_node cirkit_unit03_2dnav_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(third_robot_2dnav_node
+# target_link_libraries(cirkit_unit03_2dnav_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -126,7 +126,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS third_robot_2dnav third_robot_2dnav_node
+# install(TARGETS cirkit_unit03_2dnav cirkit_unit03_2dnav_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -151,7 +151,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_third_robot_2dnav.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_cirkit_unit03_2dnav.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
