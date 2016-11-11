@@ -14,7 +14,7 @@
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation)/map/monotsukuri141031.yaml" /> -->
   
   <!-- 教育研究4号棟2階  -->
-  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_gmapping)/map/20151006_ctrl_building.yaml" /> -->
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_gmapping)/map/20151006_ctrl_building.yaml" /> -->
   <!-- 教育研究４号棟一階広場 -->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation)/map/garden.yaml" /> -->
   <!-- Tsukuba Challenge 2014  -->
@@ -35,7 +35,7 @@
   <node pkg="ros_waypoint_generator" type="ros_waypoint_server" name="ros_waypoint_server" args="--load $(find waypoint_navigator)/waypoints/2016-11-06-11-32-09.csv" output="screen" />
   
   <!--- Run URG filter-->
-  <include file="$(find third_robot_urg_filter)/launch/urg_laser_filter.launch" />
+  <include file="$(find cirkit_unit03_urg_filter)/launch/urg_laser_filter.launch" />
 
   <!--- Run AMCL -->
   <include file="$(find cirkit_unit03_navigation)/amcl/amcl_diff.launch" />
