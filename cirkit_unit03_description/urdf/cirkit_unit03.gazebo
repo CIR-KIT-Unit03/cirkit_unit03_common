@@ -27,7 +27,7 @@
 
   <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-          <!-- <robotNamespace>/third_robot</robotNamespace> -->
+          <!-- <robotNamespace>/cirkit_unit03</robotNamespace> -->
           <!-- <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
           <robotSimType>steer_bot_hardware_gazebo/SteerBotHardwareGazebo</robotSimType>
           <!-- <robotSimType>rosbook_arm_hardware_gazebo/ROSBookArmHardwareGazebo</robotSimType> -->
@@ -64,7 +64,7 @@
              </noise>
          </ray>
          <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-             <topicName>/third_robot/laser/base_scan</topicName>
+             <topicName>/cirkit_unit03/laser/base_scan</topicName>
              <frameName>front_bottom_lrf</frameName>
          </plugin>
       </sensor>
@@ -100,7 +100,7 @@
              </noise>
          </ray>
          <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-             <topicName>/third_robot/laser/base_scan2</topicName>
+             <topicName>/cirkit_unit03/laser/base_scan2</topicName>
              <frameName>rear_bottom_lrf</frameName>
          </plugin>
       </sensor>
@@ -135,7 +135,7 @@
              </noise>
          </ray>
          <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-             <topicName>/third_robot/laser/base_scan1</topicName>
+             <topicName>/cirkit_unit03/laser/base_scan1</topicName>
              <frameName>front_top_lrf</frameName>
          </plugin>
       </sensor>
@@ -199,8 +199,8 @@
           <wheelSeparation>0.5</wheelSeparation>
           <wheelDiameter>0.24</wheelDiameter>
           <torque>20</torque>
-          <commandTopic>third_robot/cmd_vel</commandTopic>
-          <odometryTopic>third_robot/odom_diffdrive</odometryTopic>
+          <commandTopic>cirkit_unit03/cmd_vel</commandTopic>
+          <odometryTopic>cirkit_unit03/odom_diffdrive</odometryTopic>
           <odometryFrame>odom</odometryFrame>
           <robotBaseFrame>footprint</robotBaseFrame>
       </plugin>
@@ -212,7 +212,7 @@
           <updateRate>100.0</updateRate>
           <publishWheelJointState>true</publishWheelJointState>
           <alwaysOn>true</alwaysOn>
-          <robotNamespace>/third_robot</robotNamespace>
+          <robotNamespace>/cirkit_unit03</robotNamespace>
           <leftFrontJoint>base_to_left_front_wheel</leftFrontJoint>
           <rightFrontJoint>base_to_right_front_wheel</rightFrontJoint>
           <leftRearJoint>base_to_left_rear_wheel</leftRearJoint>
@@ -253,7 +253,7 @@
   <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>0.0</updateRate>
-      <cameraName>third_robot/camera1</cameraName>
+      <cameraName>cirkit_unit03/camera1</cameraName>
       <imageTopicName>image_raw</imageTopicName>
       <cameraInfoTopicName>camera_info</cameraInfoTopicName>
       <frameName>camera_link</frameName>
@@ -265,5 +265,5 @@
       <distortionT2>0.0</distortionT2>
   </plugin>
     </sensor>
-</gazebo>  
+</gazebo>
 </robot>

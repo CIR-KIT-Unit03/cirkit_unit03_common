@@ -3,7 +3,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_body.dae"/>
+        <mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_body.dae"/>
       </geometry>
 	  <origin rpy="0 0 0" xyz="0.38 0 0.55" />
     </visual>
@@ -12,7 +12,7 @@
   <link name="right_front_wheel">
     <visual>
       <geometry>
-		<mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+		<mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
         </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -28,7 +28,7 @@
   <link name="left_front_wheel">
     <visual>
       <geometry>
-		<mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+		<mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
         </geometry>
       <origin rpy="3.14159 0 0" xyz="0 0 0"/>
     </visual>
@@ -44,7 +44,7 @@
   <link name="right_rear_wheel">
     <visual>
       <geometry>
-	<mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+	<mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
         </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
@@ -60,7 +60,7 @@
   <link name="left_rear_wheel">
     <visual>
       <geometry>
-	<mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+	<mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
         </geometry>
       <origin rpy="3.14159 0 0" xyz="0 0 0"/>
     </visual>
@@ -76,7 +76,7 @@
   <!-- <link name="front_top_lrf"> -->
   <!--   <visual> -->
   <!--     <geometry> -->
-  <!-- 	<mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/> -->
+  <!-- 	<mesh filename="package://cirkit_unit03_description/meshes/LRF/UTM-30LX.dae"/> -->
   <!--     </geometry> -->
   <!--     <origin rpy="0 0.5 0" xyz="0 0 0"/> -->
   <!--   </visual> -->
@@ -92,7 +92,7 @@
    <visual>
      <origin rpy="0 0 0" xyz="0 0 0"/>
      <geometry>
-       <mesh filename="package://third_robot_description/meshes/3DURG/hokuyo3durg.dae"/>
+       <mesh filename="package://cirkit_unit03_description/meshes/3DURG/hokuyo3durg.dae"/>
      </geometry>
    </visual>
  </link>
@@ -107,7 +107,7 @@
  <link name="front_bottom_lrf">
    <visual>
      <geometry>
-       <mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+       <mesh filename="package://cirkit_unit03_description/meshes/LRF/UTM-30LX.dae"/>
      </geometry>
      <origin rpy="0 0 0" xyz="0 0 0"/>
    </visual>
@@ -123,7 +123,7 @@
   <link name="rear_bottom_lrf">
 	<visual>
       <geometry>
-		<mesh filename="package://third_robot_description/meshes/LRF/UTM-30LX.dae"/>
+		<mesh filename="package://cirkit_unit03_description/meshes/LRF/UTM-30LX.dae"/>
         </geometry>
       <origin rpy="0 0 3.1416" xyz="0 0 0"/>
     </visual>

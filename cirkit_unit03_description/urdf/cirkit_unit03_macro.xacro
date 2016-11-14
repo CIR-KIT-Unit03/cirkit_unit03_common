@@ -27,7 +27,7 @@
                 <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/>
                 <!-- <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/> -->
                 <geometry>
-                    <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+                    <mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
                 </geometry>
                 ->
             </visual>
@@ -83,7 +83,7 @@
                 <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/>
                 <!-- <origin rpy="${PI/2-reflect_right_left*PI/2} 0 0" xyz="0 0 0"/> -->
                 <geometry>
-                    <mesh filename="package://third_robot_description/meshes/third_robot/third_robot_wheel.dae"/>
+                    <mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
                 </geometry>
                 ->
             </visual>

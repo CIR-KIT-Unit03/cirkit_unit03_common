@@ -99,7 +99,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES third_robot_description
+#  LIBRARIES cirkit_unit03_description
 #  CATKIN_DEPENDS urdf
 #  DEPENDS system_lib
 )
@@ -116,24 +116,24 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(third_robot_description
-#   src/${PROJECT_NAME}/third_robot_description.cpp
+# add_library(cirkit_unit03_description
+#   src/${PROJECT_NAME}/cirkit_unit03_description.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(third_robot_description ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(cirkit_unit03_description ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(third_robot_description_node src/third_robot_description_node.cpp)
+# add_executable(cirkit_unit03_description_node src/cirkit_unit03_description_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(third_robot_description_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(cirkit_unit03_description_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(third_robot_description_node
+# target_link_libraries(cirkit_unit03_description_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -152,7 +152,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS third_robot_description third_robot_description_node
+# install(TARGETS cirkit_unit03_description cirkit_unit03_description_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -177,7 +177,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_third_robot_description.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_cirkit_unit03_description.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
