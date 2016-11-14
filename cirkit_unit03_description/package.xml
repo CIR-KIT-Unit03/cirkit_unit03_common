@@ -7,7 +7,9 @@
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <license>MIT</license>
-  <url type="reposigory">https://github.com/CIR-KIT-Unit03/cirkit_unit03/tree/master/cirkit_unit03_description</url>
+
+  <url type="reposigory">https://github.com/CIR-KIT-Unit03/cirkit_unit03.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
