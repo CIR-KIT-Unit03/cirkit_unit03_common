@@ -41,11 +41,11 @@
   <include file="$(find cirkit_unit03_navigation)/amcl/amcl_diff.launch" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find cirkit_unit03_navigation)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find cirkit_unit03_navigation)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find cirkit_unit03_navigation)/params/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find cirkit_unit03_navigation)/params/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find cirkit_unit03_navigation)/params/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find cirkit_unit03_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find cirkit_unit03_navigation)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation)/config/base_local_planner_params.yaml" command="load" />
     <!-- <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> -->
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="base_global_planner" value="carrot_planner/CarrotPlanner" />
