@@ -11,6 +11,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>cirkit_unit03_description</exec_depend>
+  <exec_depend>cirkit_unit03_2dnav</exec_depend>
 
   <export>
   </export>
