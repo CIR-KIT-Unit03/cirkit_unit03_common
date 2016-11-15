@@ -13,8 +13,11 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
+  <exec_depend>cirkit_unit03_navigation</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
   <exec_depend>xacro</exec_depend>
-  <exec_depend>cirkit_unit03_2dnav</exec_depend>
 
   <export>
   </export>
