@@ -12,7 +12,7 @@ TrajectoryPlannerROS:
   dwa: true
   oscillation_reset_dist: 0.5
   escape_vel: -0.5
-  
+
   sim_time: 3.0
   sim_granularity: 0.1
   vx_samples: 10
@@ -61,16 +61,16 @@ TebLocalPlannerROS:
  odom_topic: odom
  map_frame: /map
  # Trajectory
-  
+
  teb_autosize: True
  dt_ref: 0.3
  dt_hysteresis: 0.1
  global_plan_overwrite_orientation: True
  max_global_plan_lookahead_dist: 3.0
  feasibility_check_no_poses: 2
-    
+
  # Robot
-         
+
  max_vel_x: 3.0
  max_vel_x_backwards: 5.0
  max_vel_y: 0.0
@@ -96,13 +96,13 @@ TebLocalPlannerROS:
    vertices: [[1.00, 0.45], [1.00, -0.45], [-0.15, -0.45], [-0.15, 0.45]] # for type "polygon"
 
  # GoalTolerance
-    
+
  xy_goal_tolerance: 1.0
  yaw_goal_tolerance: 0.5
  free_goal_vel: False
-    
+
  # Obstacles
-    
+
  min_obstacle_dist: 0.25 # This value must also include our robot's expansion, since footprint_model is set to "line".
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 1.0
@@ -112,7 +112,7 @@ TebLocalPlannerROS:
  costmap_converter_rate: 5
 
  # Optimization
-    
+
  no_inner_iterations: 5
  no_outer_iterations: 4
  optimization_activate: True
