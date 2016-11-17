@@ -6,9 +6,9 @@
 
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <license>BSD</license>
-
   <url type="reposigory">https://github.com/CIR-KIT-Unit03/cirkit_unit03.git</url>
   <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03/issues</url>
+  <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>amcl</exec_depend>
