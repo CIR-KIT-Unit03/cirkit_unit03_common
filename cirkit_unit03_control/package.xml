@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>catkin_unit03_control</name>
+  <name>cirkit_unit03_control</name>
   <version>0.1.0</version>
-  <description>The catkin_unit03_control package</description>
+  <description>The cirkit_unit03_control package</description>
 
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
 
