@@ -1,8 +1,8 @@
 <launch>
-  <include file="$(find third_robot_gazebo)/launch/third_robot_clearpath_playpen.launch"/>
+  <include file="$(find cirkit_unit03_gazebo)/launch/cirkit_unit03_clearpath_playpen.launch"/>
 
-  <!--include file="$(find cirkit_unit03_navigation__gazebo)/launch/move_base.launch"/-->
-  <!--include file="$(find cirkit_unit03_navigation__gazebo)/amcl/amcl_diff.launch" /-->
+  <!--include file="$(find cirkit_unit03_navigation_gazebo)/launch/move_base.launch"/-->
+  <!--include file="$(find cirkit_unit03_navigation_gazebo)/amcl/amcl_diff.launch" /-->
 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
     args="4 cirkit_unit03_navigation_gazebo move_base.launch"
