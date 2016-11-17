@@ -136,7 +136,7 @@ TebLocalPlannerROS:
     #   rear_offset: 0.2 # for type "two_circles"
     #   rear_radius: 0.2 # for type "two_circles"
     #   vertices: [[1.00, 0.45], [1.00, -0.45], [-0.15, -0.45], [-0.15, 0.45]] # for type "polygon"
-    #   footprint: [[0.55, 0.35], [0.55, -0.35], [-0.55, -0.35], [-0.55, 0.35]] #third
+    #   footprint: [[0.55, 0.35], [0.55, -0.35], [-0.55, -0.35], [-0.55, 0.35]] #unit03
     #
     # GoalTolerance
     #

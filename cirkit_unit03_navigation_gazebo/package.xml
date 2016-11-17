@@ -1,67 +1,25 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>cirkit_unit03_navigation_gazebo</name>
   <version>0.1.0</version>
   <description>The cirkit_unit03_navigation for gazebo package</description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
-  <!-- Example:  -->
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
-
-
-  <!-- One license tag required, multiple allowed, one license per tag -->
-  <!-- Commonly used license strings: -->
-  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>BSD</license>
+  <url type="reposigory">https://github.com/CIR-KIT-Unit03/cirkit_unit03.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03/issues</url>
+  <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
-
-  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
-  <!-- Optional attribute type can be: website, bugtracker, or repository -->
-  <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/third_robot_2dnav</url> -->
-
-
-  <!-- Author tags are optional, mutiple are allowed, one per tag -->
-  <!-- Authors do not have to be maintianers, but could be -->
-  <!-- Example: -->
-  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
-
-
-  <!-- The *_depend tags are used to specify dependencies -->
-  <!-- Dependencies can be catkin packages or system dependencies -->
-  <!-- Examples: -->
-  <!-- Use build_depend for packages you need at compile time: -->
-  <!--   <build_depend>message_generation</build_depend> -->
-  <!-- Use buildtool_depend for build tool packages: -->
-  <!--   <buildtool_depend>catkin</buildtool_depend> -->
-  <!-- Use run_depend for packages you need at runtime: -->
-  <!--   <run_depend>message_runtime</run_depend> -->
-  <!-- Use test_depend for packages you need only for testing: -->
-  <!--   <test_depend>gtest</test_depend> -->
-  <!--
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>offset_urg_tf</build_depend>
-  <build_depend>third_robot_driver</build_depend>
-  <run_depend>offset_urg_tf</run_depend>
-  <run_depend>third_robot_driver</run_depend>
-  -->
-  <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roslaunch</build_depend>
-  <run_depend>amcl</run_depend>
-  <run_depend>frontier_exploration</run_depend>
-  <run_depend>gmapping</run_depend>
-  <run_depend>map_server</run_depend>
-  <run_depend>move_base</run_depend>
-  <run_depend>navfn</run_depend>
-  <run_depend>base_local_planner</run_depend>
-  <run_depend>dwa_local_planner</run_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>base_local_planner</exec_depend>
+  <exec_depend>dwa_local_planner</exec_depend>
+  <exec_depend>frontier_exploration</exec_depend>
+  <exec_depend>gmapping</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>navfn</exec_depend>
 
-  <!-- The export tag contains other, unspecified, tags -->
   <export>
-    <!-- You can specify that this package is a metapackage here: -->
-    <!-- <metapackage/> -->
-
-    <!-- Other tools can request additional information be placed here -->
-
   </export>
 </package>
