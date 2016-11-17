@@ -4,7 +4,7 @@
     <node pkg="topic_tools" type="relay" name="relay_base_scan" args="/third_robot/laser/base_scan /base_scan"/>
     <node pkg="topic_tools" type="relay" name="relay_base_scan2" args="/third_robot/laser/base_scan2 /base_scan2"/>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find third_robot_2dnav_gazebo)/config/autorun_gazebo.rviz" required="true" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_navigation_gazebo)/config/autorun_gazebo.rviz" required="true" />
 
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
         <remap from="scan" to="scan_multi" />

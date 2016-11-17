@@ -4,7 +4,7 @@
   <!-- Run the map server -->
   
   <!-- clearpath_playpen  -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find third_robot_2dnav_gazebo)/map/playpen_map.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find cirkit_unit03_navigation_gazebo)/map/playpen_map.yaml" />
 
   <node pkg="topic_tools" type="relay" name="relay_cmd_vel" args="/cmd_vel /steer_drive_controller/cmd_vel"/>
   <node pkg="topic_tools" type="relay" name="relay_odom" args="/steer_drive_controller/odom /odom"/>
@@ -12,10 +12,10 @@
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <!--param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /-->
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> 
-    <rosparam file="$(find third_robot_2dnav_gazebo)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find third_robot_2dnav_gazebo)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find third_robot_2dnav_gazebo)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find third_robot_2dnav_gazebo)/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find third_robot_2dnav_gazebo)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation_gazebo)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find cirkit_unit03_navigation_gazebo)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find cirkit_unit03_navigation_gazebo)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation_gazebo)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find cirkit_unit03_navigation_gazebo)/config/base_local_planner_params.yaml" command="load" />
   </node>
 </launch>

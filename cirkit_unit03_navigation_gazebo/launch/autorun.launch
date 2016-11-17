@@ -1,15 +1,15 @@
 <launch>
   <include file="$(find third_robot_gazebo)/launch/third_robot_clearpath_playpen.launch"/>
 
-  <!--include file="$(find third_robot_2dnav_gazebo)/launch/move_base.launch"/-->
-  <!--include file="$(find third_robot_2dnav_gazebo)/amcl/amcl_diff.launch" /-->
+  <!--include file="$(find cirkit_unit03_navigation_gazebo)/launch/move_base.launch"/-->
+  <!--include file="$(find cirkit_unit03_navigation_gazebo)/amcl/amcl_diff.launch" /-->
 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
-    args="4 third_robot_2dnav_gazebo move_base.launch"
+    args="4 cirkit_unit03_navigation_gazebo move_base.launch"
     name="timed_roslaunch_move_base" output="screen">
   </node>
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
-    args="6 third_robot_2dnav_gazebo amcl_diff.launch"
+    args="6 cirkit_unit03_navigation_gazebo amcl_diff.launch"
     name="timed_roslaunch_amcl" output="screen">
   </node>
   <!-- laserscan_merger should be executed after all launch files are called --> 
