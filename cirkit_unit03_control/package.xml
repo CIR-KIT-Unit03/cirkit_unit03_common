@@ -5,8 +5,12 @@
   <description>The cirkit_unit03_control package</description>
 
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
-
+  <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <license>BSD</license>
+  <url type="reposigory">https://github.com/CIR-KIT-Unit03/cirkit_unit03.git</url>
+  <url type="bugtracker">https://github.com/CIR-KIT-Unit03/cirkit_unit03/issues</url>
+  <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
+
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>ira_laser_tools</exec_depend>
   <exec_depend>laser_filters</exec_depend>
