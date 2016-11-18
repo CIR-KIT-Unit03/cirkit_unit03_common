@@ -31,7 +31,7 @@
   </node>
   <!-- laserscan_merger should be executed after all launch files are called --> 
   <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
-    args="1 third_robot_merge_laser third_robot_laserscan_merger.launch"
+    args="1 cirkit_unit03_control laserscan_merger.launch"
     name="timed_roslaunch_merger" output="screen">
   </node>
 </launch>
