@@ -12,6 +12,8 @@
   <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>cirkit_unit03_gazebo</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
   <exec_depend>ira_laser_tools</exec_depend>
   <exec_depend>laser_filters</exec_depend>
   <!-- The export tag contains other, unspecified, tags -->
