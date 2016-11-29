@@ -2,5 +2,4 @@
   <include file="$(find cirkit_unit03_description)/launch/cirkit_unit03.launch">
     <arg name="model" value="$(find cirkit_unit03_description)/urdf/cirkit_unit03.urdf"/>
   </include>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cirkit_unit03_viz)/config/autorun.rviz" required="true" />
 </launch>

@@ -7,6 +7,7 @@
   <maintainer email="k104009y@mail.kyutech.jp">Arita Yuta</maintainer>
   <maintainer email="p595201m@mail.kyutech.jp">Masaru Morita</maintainer>
   <maintainer email="o111027y@mail.kyutech.jp">Doi Yusuke</maintainer>
+  <maintainer email="k104073r@mail.kyutech.jp">Ryodo Tanaka</maintainer>
   <license>BSD</license>
 
   <url type="repository">https://github.com/CIR-KIT-Unit03/cirkit_unit03_common.git</url>
@@ -15,7 +16,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
-  <exec_depend>cirkit_unit03_navigation</exec_depend>
+  <exec_depend>cirkit_unit03_viz</exec_depend>
   <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rviz</exec_depend>
