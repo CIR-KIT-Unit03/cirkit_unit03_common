@@ -4,7 +4,5 @@ find_package(catkin REQUIRED)
 
 # Testing
 find_package(roslaunch)
-roslaunch_add_file_check(test/cirkit_unit03_description_demo.test.xml)
-roslaunch_add_file_check(test/cirkit_unit03_description_demo2.test.xml)
-roslaunch_add_file_check(test/cirkit_unit03.test.xml)
 roslaunch_add_file_check(test/description.test.xml)
+roslaunch_add_file_check(test/display.test.xml)
