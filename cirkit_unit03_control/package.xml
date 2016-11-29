@@ -12,13 +12,15 @@
   <author email="cirkit.infomation@gmail.com">CIR-KIT</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <exec_depend>cirkit_unit03_gazebo</exec_depend>
+  <exec_depend>controller_interface</exec_depend>
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>ira_laser_tools</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
   <exec_depend>laser_filters</exec_depend>
-  <!-- The export tag contains other, unspecified, tags -->
-  <export>
-    <!-- Other tools can request additional information be placed here -->
+  <exec_depend>ros_control</exec_depend>
+  <exec_depend>ros_controllers</exec_depend>
+  <exec_depend>steer_drive_controller</exec_depend>
 
+  <export>
   </export>
 </package>
