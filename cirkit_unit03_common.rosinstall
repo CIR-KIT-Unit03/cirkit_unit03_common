@@ -6,3 +6,7 @@
     local-name: steer_drive_ros
     uri: https://github.com/CIR-KIT/steer_drive_ros.git
     version: master
+- git:
+    local-name: lower_step_detector
+    uri: https://github.com/CIR-KIT/lower_step_detector.git
+    version: master
