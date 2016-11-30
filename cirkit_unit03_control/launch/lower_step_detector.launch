@@ -1,7 +1,7 @@
 <launch>
     <arg name="sub_topic" default="base_scan1" />
-    <node pkg="third_robot_lower_step_detector" type="lower_step_detector.py" name="lower_step_detector" args="$(arg sub_topic)">
-        <rosparam file="$(find third_robot_lower_step_detector)/config/lower_step_detector.yaml" command="load" />
+    <node pkg="lower_step_detector" type="lower_step_detector.py" name="lower_step_detector" args="$(arg sub_topic)">
+        <rosparam file="$(find lower_step_detector)/config/lower_step_detector.yaml" command="load" />
     </node>
 </launch>
 
