@@ -24,7 +24,7 @@
       <xacro:default_inertial mass="10"/>
     </link>
 
-    <!-- wheels -->
+    <xacro:rear_wheel/>
     <xacro:front_wheel right_left="right" reflect_right_left="1"/>
     <xacro:front_wheel right_left="left" reflect_right_left="-1"/>
     <xacro:wheel right_left="right" reflect_right_left="1" front_rear="rear" reflect_front_rear="-1"/>
@@ -90,12 +90,11 @@
     </joint>
 
     <!-- steer -->
-    <link name="steer"/>
-
-    <joint name="base_to_steer" type="fixed">
+    <link name="front_steer_link"/>
+    <joint name="front_steer_joint" type="fixed">
         <axis xyz="0 1 0"/>
         <parent link="base_link"/>
-        <child link="steer"/>
+        <child link="front_steer_link"/>
         <origin xyz="0.41 0 0.14"/>
     </joint>
 
