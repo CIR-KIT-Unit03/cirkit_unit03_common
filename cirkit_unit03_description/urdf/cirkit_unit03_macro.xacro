@@ -20,6 +20,17 @@
     </xacro:macro>
 
     <!-- wheel macro -->
+    <xacro:macro name="rear_wheel">
+        <link name="rear_wheel_link"/>
+        <joint name="rear_wheel_joint" type="continuous">
+            <axis xyz="0 1 0"/>
+            <parent link="base_link"/>
+            <child link="rear_wheel_link"/>
+            <origin xyz="${-base_center_x-length_from_base_center_to_wheel_x} 0 ${radius_wheel}"/>
+            <origin xyz="${length_from_base_to_wheel_front_x} 0 ${radius_wheel}"/>
+        </joint>
+    </xacro:macro>
+
     <xacro:macro name="wheel" params="right_left reflect_right_left front_rear reflect_front_rear">
         <link name="${right_left}_${front_rear}_wheel">
             <visual>
@@ -29,7 +40,6 @@
                 <geometry>
                     <mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
                 </geometry>
-                ->
             </visual>
             <collision>
                 <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
@@ -70,11 +80,13 @@
             </inertial>
         </link>
 
-        <joint name="base_to_${right_left}_front_steer" type="continuous">
+        <joint name="base_to_${right_left}_front_steer" type="revolute">
             <axis xyz="0 0 1"/>
             <parent link="base_link"/>
             <child link="steer_${right_left}"/>
-        <origin xyz="${base_center_x+length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} 0.30"/>
+            <origin xyz="${base_center_x+length_from_base_center_to_wheel_x} ${-reflect_right_left*length_from_base_to_wheel_y} 0.30"/>
+            <dynamics damping="0.7" friction="0.7"/>
+            <limit effort="7.0" lower="${-80*PI/180}" upper="${80*PI/180}" velocity="${200.0*PI/180.0*0.95}"/>
         </joint>
 
         <link name="${right_left}_front_wheel">
@@ -85,7 +97,6 @@
                 <geometry>
                     <mesh filename="package://cirkit_unit03_description/meshes/cirkit_unit03/cirkit_unit03_wheel.dae"/>
                 </geometry>
-                ->
             </visual>
             <collision>
                 <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
