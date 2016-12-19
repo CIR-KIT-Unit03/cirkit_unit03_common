@@ -4,6 +4,7 @@ find_package(catkin REQUIRED)
 
 # Testing
 find_package(roslaunch)
+roslaunch_add_file_check(test/control.test.xml)
 roslaunch_add_file_check(test/control_gazebo.test.xml)
 roslaunch_add_file_check(test/laserscan_merger.test.xml)
 roslaunch_add_file_check(test/lower_step_detector.test.xml)
