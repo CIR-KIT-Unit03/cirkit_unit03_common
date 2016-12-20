@@ -3,6 +3,8 @@
 ## Summary
 Common packages for CIR-KIT-Unit03, including control configuration, and robot description.
 
+For CIR-KIT-Unit03 instructions and tutorials, please see http://wiki.ros.org/Robots/CIR-KIT-Unit03.
+
 - cirkit_unit03_control : Control configuration
 - cirkit_unit03_description : Robot description (URDF)
 
