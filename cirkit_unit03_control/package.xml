@@ -21,8 +21,5 @@
   <exec_depend>lower_step_detector</exec_depend>
   <exec_depend>ros_control</exec_depend>
   <exec_depend>ros_controllers</exec_depend>
-  <exec_depend>steer_drive_controller</exec_depend>
-
-  <export>
-  </export>
+  <exec_depend>roslaunch</exec_depend>
 </package>
