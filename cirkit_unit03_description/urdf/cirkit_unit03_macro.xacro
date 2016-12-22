@@ -21,13 +21,19 @@
 
     <!-- wheel macro -->
     <xacro:macro name="rear_wheel">
-        <link name="rear_wheel_link"/>
+        <link name="rear_wheel_link">
+            <collision>
+                <origin rpy="${PI/2} 0 0" xyz="0 0 0"/>
+                <geometry>
+                    <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
+                </geometry>
+            </collision>
+        </link>
         <joint name="rear_wheel_joint" type="continuous">
             <axis xyz="0 1 0"/>
             <parent link="base_link"/>
             <child link="rear_wheel_link"/>
             <origin xyz="${-base_center_x-length_from_base_center_to_wheel_x} 0 ${radius_wheel}"/>
-            <origin xyz="${length_from_base_to_wheel_front_x} 0 ${radius_wheel}"/>
         </joint>
     </xacro:macro>
 
