@@ -1,4 +1,4 @@
-# cirkit_unit03_common [![Build Status](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_common.svg?branch)](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_common) [![Slack](https://img.shields.io/badge/Slack-CIR--KIT-blue.svg)](http://cir-kit.slack.com/messages/unit03_common)
+# cirkit_unit03_common [![Build Status](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_common.svg?branch=indigo-devel)](https://travis-ci.org/CIR-KIT-Unit03/cirkit_unit03_common) [![Slack](https://img.shields.io/badge/Slack-CIR--KIT-blue.svg)](http://cir-kit.slack.com/messages/unit03_common)
 
 ## Summary
 Common packages for CIR-KIT-Unit03, including control configuration, and robot description.
