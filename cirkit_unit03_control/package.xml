@@ -15,11 +15,11 @@
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>controller_interface</exec_depend>
   <exec_depend>controller_manager</exec_depend>
-  <exec_depend>ira_laser_tools</exec_depend>
   <exec_depend>joint_state_controller</exec_depend>
   <exec_depend>laser_filters</exec_depend>
   <exec_depend>lower_step_detector</exec_depend>
   <exec_depend>ros_control</exec_depend>
   <exec_depend>ros_controllers</exec_depend>
+  <!--<exec_depend>ira_laser_tools</exec_depend> -->
   <!--<exec_depend>roslaunch</exec_depend>--> <!-- this is for launch test -->
 </package>
