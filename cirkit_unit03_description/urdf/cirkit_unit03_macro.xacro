@@ -7,7 +7,7 @@
     <xacro:property name="radius_wheel" value="0.14" />
     <xacro:property name="base_center_x" value="0.015" />
     <xacro:property name="length_from_base_center_to_wheel_x" value="0.395" />
-    <xacro:property name="length_from_base_to_wheel_front_x" value="0.41" />
+    <xacro:property name="length_from_base_to_wheel_front_x" value="0.43" />
     <xacro:property name="length_from_base_to_wheel_rear_x" value="0.38" />
     <xacro:property name="length_from_base_to_wheel_y" value="0.25" />
     <xacro:macro name="default_inertial" params="mass">
@@ -110,7 +110,12 @@
                     <cylinder length="${length_wheel}" radius="${radius_wheel}"/>
                 </geometry>
             </collision>
-            <xacro:default_inertial mass="1"/>
+            <inertial>
+                <mass value="0.5" />
+                <inertia ixx="0.02" ixy="0.0" ixz="0.0"
+                    iyy="0.02" iyz="0.0"
+                    izz="0.02" />
+            </inertial>
         </link>
         <joint name="base_to_${right_left}_front_wheel" type="continuous">
             <axis xyz="0 1 0"/>
