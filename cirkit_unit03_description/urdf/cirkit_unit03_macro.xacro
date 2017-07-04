@@ -112,9 +112,9 @@
             </collision>
             <inertial>
                 <mass value="0.5" />
-                <inertia ixx="0.02" ixy="0.0" ixz="0.0"
-                    iyy="0.02" iyz="0.0"
-                    izz="0.02" />
+                <inertia ixx="0.50" ixy="0.0" ixz="0.0"
+                    iyy="0.50" iyz="0.0"
+                    izz="0.50" />
             </inertial>
         </link>
         <joint name="base_to_${right_left}_front_wheel" type="continuous">
